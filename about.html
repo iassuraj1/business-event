@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Sapphire Technologies - Mobile App &amp; Web Development</title>
+    <meta name="description"
+        content="At Sapphire Technologies, we are passionate about turning digital ideas into reality. Specializing in cutting-edge technology solutions across website development, mobile app development, digital marketing, and white-glove IT services.">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 Grid (Container only) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons & Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Dedicated About Stylesheet -->
+    <link rel="stylesheet" href="./about.css">
+</head>
+
+<body>
+
+    <!-- Top Navigation Bar (Consistent with index.html) -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="./index.html" class="brand-logo" aria-label="Sapphire Home">
+                <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
+                <span class="logo-text">sapphire</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about.html" class="nav-link active">ABOUT US</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="./index.html#events" class="nav-link">
+                            EVENTS <i class="bi bi-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu-custom">
+                            <li><a href="./index.html#home">Home Business</a></li>
+                            <li><a href="./index.html#conference">Home Conference</a></li>
+                            <li><a href="./index.html#virtual">Home Virtual Summit</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.html#blog" class="nav-link">BLOGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.html#gallery" class="nav-link">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.html#contact" class="nav-link">CONTACT US</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Right Action Icons -->
+            <div class="nav-actions">
+                <button type="button" class="action-btn search-btn" aria-label="Search" id="searchBtn">
+                    <i class="bi bi-search"></i>
+                </button>
+                <a href="./index.html#cart" class="action-btn cart-btn" aria-label="Shopping Cart">
+                    <i class="bi bi-cart2"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+                <button type="button" class="action-btn menu-toggle" id="menuToggle" aria-label="Toggle mobile menu"
+                    aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <div class="brand-logo">
+                <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
+                <span class="logo-text">sapphire</span>
+            </div>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html" class="active">ABOUT US</a></li>
+            <li><a href="./index.html#events">EVENTS</a></li>
+            <li><a href="./index.html#speakers">SPEAKERS</a></li>
+            <li><a href="./index.html#pages">PAGES</a></li>
+            <li><a href="./index.html#contact">CONTACT</a></li>
+        </ul>
+        <div class="mobile-drawer-socials">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <main>
+        <!-- 1. Hero Breadcrumb Banner with Ambient Glow Animation -->
+        <section class="about-hero-section">
+            <div class="about-hero-glow"></div>
+            <div class="container text-center">
+
+                <h1 class="about-hero-heading">About Sapphire Technologies</h1>
+                <p class="about-hero-sub">
+                    Empowering businesses worldwide with cutting-edge technology solutions, custom web &amp; mobile
+                    engineering, and white-glove excellence.
+                </p>
+                <nav class="about-breadcrumbs" aria-label="Breadcrumb">
+                    <a href="./index.html"><i class="bi bi-house-door"></i> Home</a>
+                    <span class="breadcrumb-sep"><i class="bi bi-chevron-right"></i></span>
+                    <span class="current">About Us</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- 2. Section 1: About Sapphire Technologies (Two-Column Layout with Slide Animations) -->
+        <section class="about-intro-section" id="about-sec">
+            <div class="container">
+                <div class="about-intro-grid">
+                    <!-- Left Column: Animates from Left (slide-left) -->
+                    <div class="intro-content-col animation-element slide-left">
+                        <span class="section-tag-badge">WHO WE ARE</span>
+                        <h2 class="section-main-heading">
+                            About <span class="text-gradient">Sapphire Technologies</span>
+                        </h2>
+                        <p class="intro-lead-text">
+                            At Sapphire Technologies, we are passionate about turning digital ideas into reality.
+                            Specializing in cutting-edge technology solutions, we deliver high-quality services across
+                            website development, mobile app development, digital marketing, and more. With a focus on
+                            innovation and client satisfaction, we empower businesses to thrive in the digital age by
+                            crafting customized solutions that align with their unique goals.
+                        </p>
+                        <p class="intro-body-text">
+                            Founded with the belief that technology should be a bridge, not a barrier, we help
+                            businesses navigate the complexities of the digital world with ease. Our experienced team of
+                            developers, designers, and strategists work together to deliver results that exceeds
+                            expectations.
+                        </p>
+
+                        <!-- Key Pillars Feature Cards -->
+                        <div class="intro-features-grid">
+                            <div class="feature-mini-card">
+                                <div class="mini-card-icon">
+                                    <img src="./assets/about/Worldwide-Services.png" alt="Worldwide Services Icon"
+                                        class="mini-icon-img">
+                                </div>
+                                <div class="mini-card-text">
+                                    <h4>Worldwide Services</h4>
+                                    <p>Delivering cutting-edge digital solutions to businesses globally, helping them
+                                        thrive in the competitive market with our expert support and innovation.</p>
+                                </div>
+                            </div>
+                            <div class="feature-mini-card">
+                                <div class="mini-card-icon accent-icon">
+                                    <img src="./assets/about/Best-Company-Award-winner.png" alt="Award Winning Icon"
+                                        class="mini-icon-img">
+                                </div>
+                                <div class="mini-card-text">
+                                    <h4>Award-Winning Excellence</h4>
+                                    <p>Recognized for our outstanding achievements, we pride ourselves on being a
+                                        top-tier, award-winning company that consistently delivers exceptional results.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="intro-actions-wrap">
+                            <a href="./index.html#contact" class="button-style btn-primary-pill">
+                                <span>GET IN TOUCH</span>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                            <a href="#process" class="button-style btn-secondary-pill">
+                                <span>OUR WORK PROCESS</span>
+                                <i class="bi bi-arrow-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Animates from Right (slide-right) -->
+                    <div class="intro-visual-col animation-element slide-right">
+                        <div class="visual-card-wrapper">
+                            <div class="visual-card-inner">
+                                <img src="./assets/about/about-img.png" alt="About Sapphire Technologies"
+                                    class="visual-img">
+                                <div class="visual-overlay-glow"></div>
+                            </div>
+
+                            <!-- Floating Experience Badge with Micro-Animation -->
+                            <!-- <div class="floating-experience-badge">
+                                <div class="badge-icon-wrap">
+                                    <i class="bi bi-patch-check-fill"></i>
+                                </div>
+                                <div class="badge-info">
+                                    <span class="badge-number">10+</span>
+                                    <span class="badge-label">Years of Digital<br>Excellence</span>
+                                </div>
+                            </div> -->
+
+                            <!-- Decorative Floating Tech Badge -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Section 2: White-Glove Service Experience (Featured Commitment Banner) -->
+        <section class="about-whiteglove-section">
+            <div class="container">
+                <div class="whiteglove-card animation-element slide-up">
+                    <div class="whiteglove-grid">
+                        <div class="whiteglove-content animation-element slide-left">
+                            <span class="whiteglove-tag">WHITE-GLOVE COMMITMENT</span>
+                            <h2 class="whiteglove-heading">
+                                Sapphire Technologies is committed to delivering a <span
+                                    class="text-gradient">White-Glove Service</span> experience.
+                            </h2>
+                            <p class="whiteglove-text">
+                                At Sapphire Technologies, our commitment goes beyond just providing solutions—we focus
+                                on delivering a White-Glove Service experience. We ensure every interaction, every
+                                project, and every detail is handled with care and precision. Our approach is
+                                personalized, ensuring that each client receives the tailored support and seamless
+                                delivery they deserve. From the initial consultation to post-launch support, we make
+                                sure you’re equipped for long-term success.
+                            </p>
+                            <div class="whiteglove-perks">
+                                <div class="perk-item">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Personalized Architectural Design</span>
+                                </div>
+                                <div class="perk-item">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Tailored Support &amp; Seamless Delivery</span>
+                                </div>
+                                <div class="perk-item">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Continuous Post-Launch Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="whiteglove-visual animation-element slide-right">
+                            <div class="whiteglove-image-box">
+                                <img src="./assets/about/about-banner.jpg" alt="Sapphire Technologies White-Glove Team"
+                                    class="whiteglove-img">
+                                <!-- <div class="whiteglove-badge-accent">
+                                    <i class="bi bi-award-fill"></i>
+                                    <span>Dedicated Client Delivery</span>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Section 3: Strategic Pillars (Our Mission, Our Vision, Why Choose Us with Alternating Slide Animations) -->
+        <section class="about-pillars-section">
+            <div class="container">
+                <div class="section-header-center animation-element slide-up">
+                    <span class="section-tag-badge">OUR FOUNDATION</span>
+                    <h2 class="section-main-heading">Driven by Purpose, Guided by Vision</h2>
+                    <p class="section-sub-heading">
+                        Discover the values, innovation, and client-first principles that shape our work every day.
+                    </p>
+                </div>
+
+                <div class="alternating-pillars-wrap">
+                    <!-- Row 1: Our Mission (Left: Text slide-left, Right: Image slide-right) -->
+                    <div class="pillar-alt-row">
+                        <div class="pillar-text-col animation-element slide-left">
+                            <span class="pillar-step-badge">OUR PURPOSE</span>
+                            <h3 class="pillar-row-title">Our <span class="text-gradient">Mission</span></h3>
+                            <p class="pillar-row-desc">
+                                Our mission is simple: To deliver innovative and reliable digital solutions that drives
+                                business growth and enhance user experiences. We aim to bridge the gap between
+                                cutting-edge technology and your business needs, providing top-notch services that help
+                                our clients scale and succeed in today’s competitive market.
+                            </p>
+                            <div class="pillar-row-bullets">
+                                <div class="bullet-point">
+                                    <i class="bi bi-rocket-takeoff-fill"></i>
+                                    <span>Accelerate business growth through custom digital systems</span>
+                                </div>
+                                <div class="bullet-point">
+                                    <i class="bi bi-bullseye"></i>
+                                    <span>Bridge technical capabilities with business objectives</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pillar-img-col animation-element slide-right">
+                            <div class="pillar-img-frame">
+                                <img src="./assets/about/our-mission-sapphire.jpg" alt="Our Mission"
+                                    class="pillar-featured-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Our Vision (Left: Image slide-left, Right: Text slide-right) -->
+                    <div class="pillar-alt-row reverse-mobile">
+                        <div class="pillar-img-col animation-element slide-left">
+                            <div class="pillar-img-frame">
+                                <img src="./assets/about/OurVisionSapphire.jpg" alt="Our Vision"
+                                    class="pillar-featured-img">
+                            </div>
+                        </div>
+                        <div class="pillar-text-col animation-element slide-right">
+                            <span class="pillar-step-badge">OUR ASPIRATION</span>
+                            <h3 class="pillar-row-title">Our <span class="text-gradient">Vision</span></h3>
+                            <p class="pillar-row-desc">
+                                We envision a future where every business can leverage technology to unlock its full
+                                potential. Our goal is to be at the forefront of digital transformation, helping
+                                companies of all sizes achieve operational excellence, drive innovation, and create
+                                meaningful digital experiences for their customers.
+                            </p>
+                            <div class="pillar-row-bullets">
+                                <div class="bullet-point">
+                                    <i class="bi bi-lightning-charge-fill"></i>
+                                    <span>Lead digital transformation for enterprises &amp; startups</span>
+                                </div>
+                                <div class="bullet-point">
+                                    <i class="bi bi-stars"></i>
+                                    <span>Create meaningful, human-centered digital experiences</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Why Choose Us (Left: Text slide-left, Right: Image slide-right) -->
+                    <div class="pillar-alt-row">
+                        <div class="pillar-text-col animation-element slide-left">
+                            <span class="pillar-step-badge">OUR ADVANTAGE</span>
+                            <h3 class="pillar-row-title">Why <span class="text-gradient">Choose Us</span></h3>
+                            <ul class="why-choose-list">
+                                <li>
+                                    <div class="check-icon-wrap"><i class="bi bi-check2-circle"></i></div>
+                                    <div class="check-content">
+                                        <strong>Expertise Across Domains:</strong> From website development to app
+                                        design, we offer comprehensive solutions across digital platforms.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-icon-wrap"><i class="bi bi-check2-circle"></i></div>
+                                    <div class="check-content">
+                                        <strong>Client-Centric Approach:</strong> Our white-glove service means that
+                                        your business’s specific needs are our top priority.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-icon-wrap"><i class="bi bi-check2-circle"></i></div>
+                                    <div class="check-content">
+                                        <strong>Proven Results:</strong> We have a track record of delivering successful
+                                        projects that meet deadlines and exceed client expectations.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-icon-wrap"><i class="bi bi-check2-circle"></i></div>
+                                    <div class="check-content">
+                                        <strong>Innovative Solutions:</strong> We stay ahead of the curve, implementing
+                                        the latest technologies and best practices to keep you competitive.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-icon-wrap"><i class="bi bi-check2-circle"></i></div>
+                                    <div class="check-content">
+                                        <strong>24/7 Support:</strong> With round-the-clock assistance, we ensure your
+                                        business stays online and optimized at all times.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pillar-img-col animation-element slide-right">
+                            <div class="pillar-img-frame">
+                                <img src="./assets/about/why-choose-us.jpg" alt="Why Choose Us"
+                                    class="pillar-featured-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Section 4: Achievements & Statistics Counter Bar -->
+        <section class="about-stats-section">
+            <div class="container">
+                <div class="stats-intro stats-intro-left animation-element slide-left">
+                    <span class="stats-tag-badge">PROVEN TRACK RECORD</span>
+                    <h3 class="stats-main-title">Build a Successful Business with Professional <span
+                            class="stats-text-gradient">IT Support</span></h3>
+                    <p class="stats-sub-text">
+                        Technology is only as powerful as the people who wield it. At Sapphire Technologies, we empower
+                        you to harness its full potential.
+                    </p>
+                    <div class="stats-btn-wrap">
+                        <a href="./index.html#contact" class="button-style stats-btn">
+                            <span>GET IN TOUCH</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="stats-counter-grid">
+                    <!-- Stat 1: 200 + Projects Complete -->
+                    <div class="counter-cell-socket">
+                        <div class="counter-box animation-element cell-pop" style="--cell-delay: 0.05s;">
+                            <div class="counter-icon-holder">
+                                <img src="./assets/about/Projects-Completed.png" alt="Projects Completed Icon"
+                                    class="stat-img-icon">
+                            </div>
+                            <div class="counter-number-wrap">
+                                <span class="counter-value" data-target="200">200</span><span
+                                    class="counter-suffix">+</span>
+                            </div>
+                            <p class="counter-label">Projects Complete</p>
+                        </div>
+                    </div>
+
+                    <!-- Stat 2: 150 k + Mobile Application -->
+                    <div class="counter-cell-socket">
+                        <div class="counter-box animation-element cell-pop" style="--cell-delay: 0.22s;">
+                            <div class="counter-icon-holder">
+                                <img src="./assets/about/Mobile-Application.png" alt="Mobile Application Icon"
+                                    class="stat-img-icon">
+                            </div>
+                            <div class="counter-number-wrap">
+                                <span class="counter-value" data-target="150">150</span><span class="counter-suffix">k
+                                    +</span>
+                            </div>
+                            <p class="counter-label">Mobile Application</p>
+                        </div>
+                    </div>
+
+                    <!-- Stat 3: 200 + Clients Are Happy -->
+                    <div class="counter-cell-socket">
+                        <div class="counter-box animation-element cell-pop" style="--cell-delay: 0.39s;">
+                            <div class="counter-icon-holder">
+                                <img src="./assets/about/Clients-Are-Happy.png" alt="Clients Are Happy Icon"
+                                    class="stat-img-icon">
+                            </div>
+                            <div class="counter-number-wrap">
+                                <span class="counter-value" data-target="200">200</span><span
+                                    class="counter-suffix">+</span>
+                            </div>
+                            <p class="counter-label">Clients Are Happy</p>
+                        </div>
+                    </div>
+
+                    <!-- Stat 4: 10 + Nation Served -->
+                    <div class="counter-cell-socket">
+                        <div class="counter-box animation-element cell-pop" style="--cell-delay: 0.56s;">
+                            <div class="counter-icon-holder">
+                                <img src="./assets/about/Nation-Served.png" alt="Nation Served Icon"
+                                    class="stat-img-icon">
+                            </div>
+                            <div class="counter-number-wrap">
+                                <span class="counter-value" data-target="10">10</span><span
+                                    class="counter-suffix">+</span>
+                            </div>
+                            <p class="counter-label">Nation Served</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Section 5: Our Work Process (4-Step Sequential Cards) -->
+        <section class="about-process-section" id="process">
+            <div class="container">
+                <div class="section-header-center animation-element slide-up">
+                    <span class="section-tag-badge">HOW WE WORK</span>
+                    <h2 class="section-main-heading">Our Work <span class="text-gradient">Process</span></h2>
+                    <h5 class="process-sub-heading">
+                        <strong>At Sapphire Technologies</strong>, our four-step process ensures every project is
+                        delivered with precision and quality:
+                    </h5>
+                </div>
+
+                <div class="process-steps-grid">
+                    <!-- Step 01: Planning Socket & Pop-Out Card -->
+                    <div class="process-cell-socket">
+                        <div class="cell-cut-bed">
+                            <div class="cut-bed-indicator">
+                                <span class="cut-bed-slot-num">01</span>
+                                <span class="cut-bed-slot-tag"><i class="fa-solid fa-layer-group"></i> CELL 01 &bull;
+                                    PLANNING</span>
+                            </div>
+                        </div>
+                        <div class="process-card animation-element cell-card-pop" style="--proc-delay: 0.05s;">
+                            <div class="step-watermark">01</div>
+                            <div class="step-icon-wrap">
+                                <img src="./assets/about/Planing.png" alt="Planning Icon" class="process-icon-img">
+                            </div>
+                            <span class="step-tag">STEP - 01</span>
+                            <h4 class="step-title">Planning</h4>
+                            <p class="step-desc">
+                                We begin with a thorough understanding of your business goals, followed by strategic
+                                planning to align our efforts with your vision.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 02: Design Socket & Pop-Out Card -->
+                    <div class="process-cell-socket">
+                        <div class="cell-cut-bed">
+                            <div class="cut-bed-indicator">
+                                <span class="cut-bed-slot-num">02</span>
+                                <span class="cut-bed-slot-tag"><i class="fa-solid fa-compass-drafting"></i> CELL 02
+                                    &bull; DESIGN</span>
+                            </div>
+                        </div>
+                        <div class="process-card animation-element cell-card-pop" style="--proc-delay: 0.22s;">
+                            <div class="step-watermark">02</div>
+                            <div class="step-icon-wrap">
+                                <img src="./assets/about/Design.jpg" alt="Design Icon" class="process-icon-img">
+                            </div>
+                            <span class="step-tag">STEP - 02</span>
+                            <h4 class="step-title">Design</h4>
+                            <p class="step-desc">
+                                Our team of designers crafts visually appealing and user-friendly interfaces tailored to
+                                your brand identity.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 03: Development Socket & Pop-Out Card -->
+                    <div class="process-cell-socket">
+                        <div class="cell-cut-bed">
+                            <div class="cut-bed-indicator">
+                                <span class="cut-bed-slot-num">03</span>
+                                <span class="cut-bed-slot-tag"><i class="fa-solid fa-code"></i> CELL 03 &bull;
+                                    DEV</span>
+                            </div>
+                        </div>
+                        <div class="process-card animation-element cell-card-pop" style="--proc-delay: 0.39s;">
+                            <div class="step-watermark">03</div>
+                            <div class="step-icon-wrap">
+                                <img src="./assets/about/developement.png" alt="Development Icon"
+                                    class="process-icon-img">
+                            </div>
+                            <span class="step-tag">STEP - 03</span>
+                            <h4 class="step-title">Development</h4>
+                            <p class="step-desc">
+                                Using the latest technologies, we bring your vision to life, ensuring the functionality
+                                and
+                                scalability of every solution.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 04: Testing Socket & Pop-Out Card -->
+                    <div class="process-cell-socket">
+                        <div class="cell-cut-bed">
+                            <div class="cut-bed-indicator">
+                                <span class="cut-bed-slot-num">04</span>
+                                <span class="cut-bed-slot-tag"><i class="fa-solid fa-shield-halved"></i> CELL 04 &bull;
+                                    TESTING</span>
+                            </div>
+                        </div>
+                        <div class="process-card animation-element cell-card-pop" style="--proc-delay: 0.56s;">
+                            <div class="step-watermark">04</div>
+                            <div class="step-icon-wrap">
+                                <img src="./assets/about/Testing.png" alt="Testing Icon" class="process-icon-img">
+                            </div>
+                            <span class="step-tag">STEP - 04</span>
+                            <h4 class="step-title">Testing</h4>
+                            <p class="step-desc">
+                                We perform rigorous testing to guarantee that every product we deliver is flawless,
+                                secure,
+                                and optimized for performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Section 6: Client Trust & Logo Carousel (Loved By 200+ Customers) -->
+        <section class="about-clients-section">
+            <div class="container">
+                <div class="section-header-center animation-element slide-up">
+                    <span class="section-tag-badge">GLOBAL TRUST</span>
+                    <h2 class="section-main-heading">Loved By 200+ Customers All Over The World</h2>
+                    <h6 class="clients-sub-title">Our greatest asset is our customers and clients satisfaction!</h6>
+                    <div class="global-hubs-badges">
+                        <span class="hub-pill">RIYADH</span>
+                        <span class="hub-pill">LONDON</span>
+                        <span class="hub-pill">OMAN</span>
+                        <span class="hub-pill">INDIA</span>
+                        <span class="hub-pill">KUWAIT</span>
+                        <span class="hub-pill">UAE</span>
+                        <span class="hub-pill">TORONTO</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continuous Dual-Track Logo Marquee -->
+            <div class="logo-marquee-wrapper max-width">
+                <!-- Row 1: Scrolling Left -->
+                <div class="logo-marquee-track track-left">
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/Barkely.png" alt="Barkely"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/SHAAZO.png" alt="SHAAZO"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/KFB.png" alt="KFB"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/SAGA.png" alt="SAGA"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/MEMF.png" alt="MEMF"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/SLT.png" alt="SLT"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/bena.png" alt="bena"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/PRINCESS-HOUSE.png"
+                            alt="Princess House"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/ivy-bouquet.png" alt="Ivy Bouquet">
+                    </div>
+
+                    <!-- Duplicate for Seamless Infinite Loop -->
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/Barkely.png" alt="Barkely"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/SHAAZO.png" alt="SHAAZO"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/KFB.png" alt="KFB"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/SAGA.png" alt="SAGA"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/MEMF.png" alt="MEMF"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/SLT.png" alt="SLT"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/bena.png" alt="bena"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/PRINCESS-HOUSE.png"
+                            alt="Princess House"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/ivy-bouquet.png" alt="Ivy Bouquet">
+                    </div>
+                </div>
+
+                <!-- Row 2: Scrolling Right -->
+                <div class="logo-marquee-track track-right">
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/kids-fable.png" alt="Kids Fable">
+                    </div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/ASJLawfirm.png" alt="ASJ Law Firm">
+                    </div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/AutoV.png" alt="AutoV"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/Browsbyrawan.png"
+                            alt="Brows By Rawan"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/buidfortune.png" alt="Build Fortune">
+                    </div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/CIA.png" alt="CIA"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/CK.png" alt="CK"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/Falcon.png" alt="Falcon"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/fivecolour.png" alt="Five Colour">
+                    </div>
+
+                    <!-- Duplicate for Seamless Infinite Loop -->
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/kids-fable.png" alt="Kids Fable">
+                    </div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/ASJLawfirm.png" alt="ASJ Law Firm">
+                    </div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/AutoV.png" alt="AutoV"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/Browsbyrawan.png"
+                            alt="Brows By Rawan"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/buidfortune.png" alt="Build Fortune">
+                    </div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/CIA.png" alt="CIA"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/CK.png" alt="CK"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/Falcon.png" alt="Falcon"></div>
+                    <div class="logo-marquee-item"><img src="./assets/about/logos/fivecolour.png" alt="Five Colour">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Section 7: Let's Talk Contact Grid (with Dynamic Interactive Animations & Ambient Gradient) -->
+        <section class="about-letstalk-section lets-talk" id="talk">
+            <div class="container">
+                <div class="section-header-center animation-element slide-up">
+                    <span class="section-tag-badge">REACH OUT</span>
+                    <h2 class="section-main-heading">Let's <span class="text-gradient">Talk</span></h2>
+                    <p class="section-sub-heading">
+                        We'd love to answer any questions you may have. Contact us and discuss your business objectives
+                        &amp; we will let you know how we can help along with a Free Quote.
+                    </p>
+                </div>
+
+                <div class="letstalk-grid">
+                    <!-- Channel 1: Call -->
+                    <div class="letstalk-card card-talk-call entry animation-element slide-up">
+                        <div class="talk-icon-box">
+                            <img src="./assets/about/talk_call.png" class="talk-icon-img anim-call vert-move"
+                                alt="Give us a call">
+                        </div>
+                        <h3 class="talk-title">Give us a call</h3>
+                        <a href="tel:+919311439117" class="talk-link">+91 931 143 9117</a>
+                    </div>
+
+                    <!-- Channel 2: Write to us -->
+                    <div class="letstalk-card card-talk-mail entry animation-element slide-up">
+                        <div class="talk-icon-box">
+                            <img src="./assets/about/talk_mail.png" class="talk-icon-img anim-mail vert-move"
+                                alt="Write to us">
+                        </div>
+                        <h3 class="talk-title">Write to us</h3>
+                        <a href="mailto:sales@sapphireitsg.com" class="talk-link">sales@sapphireitsg.com</a>
+                    </div>
+
+                    <!-- Channel 3: Video call on Skype -->
+                    <div class="letstalk-card card-talk-skype entry animation-element slide-up">
+                        <div class="talk-icon-box">
+                            <img src="./assets/about/talk_skype.png" class="talk-icon-img anim-skype vert-move"
+                                alt="Video call is on Skype">
+                        </div>
+                        <h3 class="talk-title">Video call is on Skype</h3>
+                        <a href="skype:live:.cid.3ee7ab33f156ba6b?chat" class="talk-link">live:.cid.3ee7ab33f156ba6b</a>
+                    </div>
+
+                    <!-- Channel 4: Chat with us -->
+                    <div class="letstalk-card card-talk-chat entry animation-element slide-up">
+                        <div class="talk-icon-box">
+                            <img src="./assets/about/talk_chat.png" class="talk-icon-img anim-chat vert-move"
+                                alt="Chat with us">
+                        </div>
+                        <h3 class="talk-title">Chat with us</h3>
+                        <a href="https://wa.me/919311439117" target="_blank" rel="noopener noreferrer"
+                            class="talk-link">+91 931 143 9117</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Section 8: Global Presence & International Offices -->
+        <section class="about-presence-section">
+            <div class="container">
+                <div class="section-header-center animation-element slide-up">
+                    <span class="section-tag-badge">WORLDWIDE FOOTPRINT</span>
+                    <h2 class="section-main-heading">Serving Clients Across 6 International Hubs</h2>
+                    <p class="section-sub-heading">
+                        Our worldwide presence empowers us to provide local attention with international engineering
+                        excellence.
+                    </p>
+                </div>
+
+                <div class="presence-grid">
+                    <!-- India Head Office -->
+                    <div class="presence-card card-india animation-element slide-up">
+                        <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <h4 class="presence-country">India Head Office</h4>
+                        <p class="presence-role">C-71 sector -19 Noida India- 201301</p>
+                        <span class="presence-contact">info@sapphireitsg.com | +91 931 143 9117</span>
+                    </div>
+
+                    <!-- Saudi Arabia Office -->
+                    <div class="presence-card card-saudi animation-element slide-up">
+                        <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <h4 class="presence-country">Saudi Arabia Office</h4>
+                        <p class="presence-role">2988 Alkhalij Road - AlNaseem Dist. , Sayhat 32453 - 8764</p>
+                        <span class="presence-contact">Dammam 31431, Khalej Road, Saudi Arabia</span>
+                    </div>
+
+                    <!-- Canada Office -->
+                    <div class="presence-card card-canada animation-element slide-up">
+                        <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <h4 class="presence-country">Canada Office</h4>
+                        <p class="presence-role">McBride Ave, Mississauga L5C 1M8, Canada</p>
+                        <span class="presence-contact">North America Operations Hub</span>
+                    </div>
+
+                    <!-- Dubai Office -->
+                    <div class="presence-card card-uae animation-element slide-up">
+                        <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <h4 class="presence-country">Dubai (UAE)</h4>
+                        <p class="presence-role">MENA Client Relations &amp; Delivery</p>
+                        <span class="presence-contact">Web Designing &amp; Mobile App Development</span>
+                    </div>
+
+                    <!-- Kuwait Office -->
+                    <div class="presence-card card-kuwait animation-element slide-up">
+                        <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <h4 class="presence-country">Kuwait</h4>
+                        <p class="presence-role">Gulf Digital Operations</p>
+                        <span class="presence-contact">Web Designing &amp; Mobile Development</span>
+                    </div>
+
+                    <!-- London Office -->
+                    <div class="presence-card card-uk animation-element slide-up">
+                        <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <h4 class="presence-country">London (UK)</h4>
+                        <p class="presence-role">European Innovation Hub</p>
+                        <span class="presence-contact">Enterprise Digital Marketing &amp; IT Solutions</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Call To Action Banner -->
+        <section class="about-cta-section">
+            <div class="container">
+                <div class="about-cta-card animation-element slide-up">
+                    <div class="cta-left-content">
+                        <span class="cta-eyebrow">START YOUR JOURNEY</span>
+                        <h2 class="cta-heading">Ready to Build Something Remarkable Together?</h2>
+                        <p class="cta-subtext">
+                            Schedule a free strategic consultation with our senior technical advisors and see how
+                            Sapphire Technologies can accelerate your digital roadmap.
+                        </p>
+                    </div>
+                    <div class="cta-right-action">
+                        <a href="./index.html#contact" class="button-style btn-cta-primary">
+                            <span>REQUEST QUOTE</span>
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Subscribe Banner Section (Floating above footer) -->
+    <section>
+        <div class="subscribe-form container">
+            <div class="subscribe-wrapper">
+                <!-- Left: Mail Icon & Info -->
+                <div class="subscribe-left">
+                    <div class="subscribe-icon-wrap" aria-hidden="true">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                    <div class="subscribe-text-content">
+                        <h3 class="subscribe-title">Stay connected with Sapphire</h3>
+                        <p class="subscribe-subtitle">Be the first to know about new products, exclusive tips and
+                            exclusive offers.</p>
+                    </div>
+                </div>
+
+                <!-- Center: Email Input & Subscribe Button -->
+                <form class="subscribe-form-action" onsubmit="event.preventDefault();">
+                    <div class="subscribe-input-group">
+                        <input type="email" class="subscribe-input" placeholder="Enter your email address" required
+                            aria-label="Enter your email address">
+                        <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Site Footer (Identical to index.html) -->
+    <footer class="site-footer" id="contact">
+        <div class="container">
+            <div class="footer-top">
+                <!-- Col 1: Brand & Contact -->
+                <div class="footer-col footer-col-brand">
+                    <a href="./index.html" class="brand-logo" aria-label="Sapphire Home">
+                        <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
+                        <span class="logo-text">sapphire</span>
+                    </a>
+                    <p class="footer-address">
+                        Middlest 2 East 42nd Streearketplace<br>
+                        New York, NY 10017
+                    </p>
+                    <!-- <a href="tel:+1235590067990" class="footer-phone">+123(55) 90067990</a>
+                    <a href="mailto:info@gmail.com" class="footer-email">info@gmail.com</a> -->
+
+                    <div class="footer-socials">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="quick-lin">
+                        <h3 class="footer-title">Quick links</h3>
+                        <ul class="footer-links-list">
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="speakers.html">Events</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#agenda">Blogs</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#sponsors"> Gallery</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="quick-lin">
+                        <h3 class="footer-title">Quick links</h3>
+                        <ul class="footer-links-list">
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Cookies Policy</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Col 3: Newsletter / Contact Info -->
+                <div class="footer-col footer-col-newsletter">
+                    <h3 class="footer-title">Contact Information</h3>
+                    <div class="footer-links-list">
+                        <li><a href="about.html">
+                                <i class="bi bi-envelope-arrow-up"></i>
+                                : info@sapphireitsg.com</a></li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/r3Q6iFM3CyHRwmzE9" target="_self">
+                                <i class="bi bi-geo-alt"></i> :Golden-I, Office No. C-203 ,Noida</a>
+                        </li>
+                        <li><a href="speakers.html"><i class="bi bi-telephone-outbound"></i> :+919311439117</a></li>
+                        <li><a href="#agenda"><i class="bi bi-browser-chrome"></i> : https://sapphireitsg.com/</a></li>
+                        <li><a href="#sponsors"> <i class="bi bi-alarm"></i> : 21 Sep 2026</a></li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar: Copyright & Socials & Scroll Top -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    Copyrights © 2026. All rights reserved by Sapphire Technologies
+                </p>
+                <div class="footer-bottom-right">
+                    <a class="footer-copyright" href="#">Privacy Policy</a>
+                    <a class="footer-copyright" href="#">Terms & Condition</a>
+                    <a class="footer-copyright" href="#">Cookies</a>
+
+                    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+                        <i class="bi bi-chevron-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for mobile drawer toggle, scroll reveal, counters, and scroll-to-top -->
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Precise Scroll In-View Animation (slide-left, slide-right, slide-up, cell-pop)
+            const animElements = document.querySelectorAll('.animation-element');
+
+            function checkInView() {
+                const windowHeight = window.innerHeight;
+
+                animElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+
+                    // When element enters viewport on scroll
+                    if (rect.top <= windowHeight * 0.90 && rect.bottom >= 30) {
+                        el.classList.add('in-view');
+                    } else if (rect.top > windowHeight + 60 || rect.bottom < -60) {
+                        // Reset when scrolled out of view so animation replays when scrolling back
+                        el.classList.remove('in-view');
+                    }
+                });
+            }
+
+            // Initial check and event listeners
+            checkInView();
+            window.addEventListener('scroll', checkInView, { passive: true });
+            window.addEventListener('resize', checkInView, { passive: true });
+
+            // 2. Animated Number Counters
+            const counters = document.querySelectorAll('.counter-value');
+            let counted = false;
+
+            function checkCounters() {
+                const statsSection = document.querySelector('.about-stats-section');
+                if (!statsSection) return;
+
+                const rect = statsSection.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.88 && rect.bottom >= 50) {
+                    if (!counted) {
+                        counted = true;
+                        counters.forEach(counter => {
+                            const target = +counter.getAttribute('data-target');
+                            const duration = 1600;
+                            const stepTime = 20;
+                            const steps = duration / stepTime;
+                            const increment = target / steps;
+                            let current = 0;
+
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    counter.innerText = target;
+                                    clearInterval(timer);
+                                } else {
+                                    counter.innerText = Math.floor(current);
+                                }
+                            }, stepTime);
+                        });
+                    }
+                } else if (rect.top > window.innerHeight + 80 || rect.bottom < 0) {
+                    counted = false;
+                }
+            }
+
+            window.addEventListener('scroll', checkCounters, { passive: true });
+            checkCounters();
+
+            // 3. Header background change on scroll (Identical to home page)
+            const siteHeader = document.getElementById('siteHeader');
+            if (siteHeader) {
+                const updateHeaderState = () => {
+                    if (window.scrollY > 40) {
+                        siteHeader.classList.add('scrolled');
+                    } else {
+                        siteHeader.classList.remove('scrolled');
+                    }
+                };
+                window.addEventListener('scroll', updateHeaderState, { passive: true });
+                updateHeaderState(); // Check on initial page load
+            }
+
+            // 4. Scroll to Top Button
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // 5. Mobile Drawer Toggle (Identical to script.js)
+            const menuToggle = document.getElementById('menuToggle');
+            const drawerClose = document.getElementById('drawerClose');
+            const mobileDrawer = document.getElementById('mobileDrawer');
+            const drawerBackdrop = document.getElementById('drawerBackdrop');
+
+            function toggleDrawer(open) {
+                if (mobileDrawer) {
+                    mobileDrawer.classList.toggle('open', open);
+                    mobileDrawer.classList.toggle('active', open);
+                }
+                if (drawerBackdrop) {
+                    drawerBackdrop.classList.toggle('active', open);
+                    drawerBackdrop.classList.toggle('open', open);
+                }
+                if (menuToggle) {
+                    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                }
+                document.body.style.overflow = open ? 'hidden' : '';
+            }
+
+            if (menuToggle) {
+                menuToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    toggleDrawer(true);
+                });
+            }
+            if (drawerClose) {
+                drawerClose.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    toggleDrawer(false);
+                });
+            }
+            if (drawerBackdrop) {
+                drawerBackdrop.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    toggleDrawer(false);
+                });
+            }
+
+            // Close mobile drawer when clicking any link inside it
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-list a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => toggleDrawer(false));
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileDrawer && (mobileDrawer.classList.contains('active') || mobileDrawer.classList.contains('open'))) {
+                    toggleDrawer(false);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

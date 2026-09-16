@@ -24,223 +24,257 @@
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="icon" href="./assets/logo.png" type="image/png">
 </head>
 
 <body>
 
-    <!-- Main Hero & Header Section -->
-    <section class="header-section hero-wrapper max-width">
+    <!-- Top Navigation Bar (Separated from Hero Banner) -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="#home" class="brand-logo" aria-label="Sapphire Home">
+                <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
+                <span class="logo-text">sapphire</span>
+            </a>
 
-        <!-- Background Image Slides Layer -->
-        <div class="hero-slides-wrapper" aria-hidden="true">
-            <div class="hero-slide active" style="background-image: url('./assets/banner-01.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('./assets/banner-02.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('./assets/banner-03.jpg');"></div>
-        </div>
+            <!-- Desktop Navigation Links -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="#home" class="nav-link active">
+                            HOME
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about.html" class="nav-link">ABOUT US</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#events" class="nav-link">
+                            EVENTS <i class="bi bi-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu-custom">
+                            <li><a href="#home">Event 1</a></li>
+                            <li><a href="#conference">Event 2</a></li>
+                            <li><a href="#virtual">Event 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">BLOGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">CONTACT US</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <!-- Top Navigation Bar -->
-        <header class="site-header" id="siteHeader">
-            <div class="container nav-container">
-                <!-- Logo -->
-                <a href="#" class="brand-logo" aria-label="Sapphire Home">
-                    <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
-                    <span class="logo-text">sapphire</span>
+            <!-- Right Action Icons -->
+            <div class="nav-actions">
+                <button class="action-btn search-btn" aria-label="Search" id="searchBtn">
+                    <i class="bi bi-search"></i>
+                </button>
+                <a href="#cart" class="action-btn cart-btn" aria-label="Shopping Cart">
+                    <i class="bi bi-cart2"></i>
+                    <span class="cart-badge">0</span>
                 </a>
-
-                <!-- Desktop Navigation Links -->
-                <nav class="desktop-nav" aria-label="Main Navigation">
-                    <ul class="nav-list">
-                        <li class="nav-item has-dropdown">
-                            <a href="#home" class="nav-link active">
-                                HOME
-                            </a>
-                            <!-- <ul class="dropdown-menu-custom">
-                                <li><a href="#">Home Business</a></li>
-                                <li><a href="#">Home Conference</a></li>
-                                <li><a href="#">Home Virtual Summit</a></li>
-                            </ul> -->
-
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">ABOUT US</a>
-                        </li>
-                        <li class="nav-item has-dropdown">
-                            <a href="#events" class="nav-link">
-                                EVENTS <i class="bi bi-chevron-down dropdown-arrow"></i>
-                            </a>
-                            <ul class="dropdown-menu-custom">
-                                <li><a href="#">Home Business</a></li>
-                                <li><a href="#">Home Conference</a></li>
-                                <li><a href="#">Home Virtual Summit</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">blogs</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">Gallery</a>
-                        </li>
-                        <!-- </li>
-                     
-                        <li class="nav-item has-dropdown">
-                            <a href="#speakers" class="nav-link">
-                                SPEAKERS <i class="bi bi-chevron-down dropdown-arrow"></i>
-                            </a>
-                            <ul class="dropdown-menu-custom">
-                                <li><a href="#">Keynote Speakers</a></li>
-                                <li><a href="#">Guest Lecturers</a></li>
-                                <li><a href="#">Speaker Bio</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item has-dropdown">
-                            <a href="#pages" class="nav-link">
-                                PAGES <i class="bi bi-chevron-down dropdown-arrow"></i>
-                            </a>
-                            <ul class="dropdown-menu-custom">
-                                <li><a href="#">About Summit</a></li>
-                                <li><a href="#">Pricing & Tickets</a></li>
-                                <li><a href="#">Sponsors & Partners</a></li>
-                                <li><a href="#">FAQ</a></li>
-                            </ul>
-                        </li> -->
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">CONTACT US</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!-- Right Action Icons -->
-                <div class="nav-actions">
-                    <button class="action-btn search-btn" aria-label="Search" id="searchBtn">
-                        <i class="bi bi-search"></i>
-                    </button>
-                    <a href="#cart" class="action-btn cart-btn" aria-label="Shopping Cart">
-                        <i class="bi bi-cart2"></i>
-                        <span class="cart-badge">0</span>
-                    </a>
-                    <button class="action-btn menu-toggle" id="menuToggle" aria-label="Toggle mobile menu"
-                        aria-expanded="false">
-                        <i class="bi bi-list"></i>
-                    </button>
-                </div>
-            </div>
-        </header>
-
-        <!-- Mobile Navigation Drawer / Offcanvas -->
-        <div class="mobile-drawer" id="mobileDrawer">
-            <div class="drawer-header">
-                <div class="brand-logo">
-                    <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
-                    <span class="logo-text">sapphire</span>
-                </div>
-                <button class="drawer-close" id="drawerClose" aria-label="Close menu">
-                    <i class="bi bi-x-lg"></i>
+                <button class="action-btn menu-toggle" id="menuToggle" aria-label="Toggle mobile menu"
+                    aria-expanded="false">
+                    <i class="bi bi-list"></i>
                 </button>
             </div>
-            <ul class="mobile-nav-list">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#events">EVENTS</a></li>
-                <li><a href="#speakers">SPEAKERS</a></li>
-                <li><a href="#pages">PAGES</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-            <div class="mobile-drawer-socials">
-                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
-                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            </div>
         </div>
-        <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    </header>
 
-        <!-- Left Vertical Social Sidebar -->
-        <aside class="left-icons social-sidebar" aria-label="Social Media Links">
-            <div class="sidebar-line"></div>
-            <div class="sidebar-icons">
-                <a href="#" class="social-link" aria-label="Facebook">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="Twitter X">
-                    <i class="bi bi-twitter-x"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="LinkedIn">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="WhatsApp">
-                    <i class="bi bi-whatsapp"></i>
-                </a>
+    <!-- Mobile Navigation Drawer / Offcanvas -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <div class="brand-logo">
+                <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
+                <span class="logo-text">sapphire</span>
             </div>
-            <div class="sidebar-label">
-                <span>Follow Us On:</span>
-            </div>
-        </aside>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="./about.html">ABOUT US</a></li>
+            <li><a href="#events">EVENTS</a></li>
+            <li><a href="#speakers">SPEAKERS</a></li>
+            <li><a href="#pages">PAGES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div class="mobile-drawer-socials">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
-        <!-- Main Hero Banner Content -->
-        <div class="container hero-container">
-            <div class="banner-heading hero-content">
-                <!-- Date Pill / Badge -->
-                <div class="hero-date-badge">
-                    <span class="bullet-dot"></span>
-                    <span class="date-text">18 - 22 JAN, 2026</span>
-                </div>
+    <!-- Main Hero Banner Section with Synchronized Moving Text & Image Carousel -->
+    <section class="banner-section" id="home" aria-label="Featured Events Banner">
+        <div class="hero-wrapper max-width">
 
-                <!-- Main Bold Heading -->
-                <h1 class="hero-title h1">
-                    BUSINESS<br>
-                    SUMMIT<br>
-                    2026
-                </h1>
-
-                <!-- Location Line -->
-                <p class="hero-location text-size">
-                    23rd Avenue, 4th Street, Chicago, Illinois, USA
-                </p>
-
-                <!-- Countdown Timer -->
-                <!-- <div class="countdown-grid" role="timer" aria-label="Event Countdown">
-                    <div class="timer-box">
-                        <span class="timer-number" id="timerDays">74</span>
-                        <span class="timer-label">DAYS</span>
-                    </div>
-                    <div class="timer-box">
-                        <span class="timer-number" id="timerHours">7</span>
-                        <span class="timer-label">HRS</span>
-                    </div>
-                    <div class="timer-box">
-                        <span class="timer-number" id="timerMins">7</span>
-                        <span class="timer-label">MINS</span>
-                    </div>
-                    <div class="timer-box">
-                        <span class="timer-number" id="timerSecs">55</span>
-                        <span class="timer-label">SECS</span>
-                    </div>
-                </div> -->
-
-                <!-- Call to Action Button -->
-                <div class="hero-cta-wrap">
-                    <a href="#discover" class="btn-discover">
-                        <span>DISCOVER MORE</span>
-                        <i class="bi bi-arrow-up-right"></i>
+            <!-- Left Vertical Social Sidebar -->
+            <aside class="left-icons social-sidebar" aria-label="Social Media Links">
+                <div class="sidebar-line"></div>
+                <div class="sidebar-icons">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter X">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
                     </a>
                 </div>
+                <div class="sidebar-label">
+                    <span>Follow Us On:</span>
+                </div>
+            </aside>
+
+            <!-- Slider Viewport & Moving Track -->
+            <div class="hero-slider" id="heroSlider">
+                <div class="hero-slider-track" id="heroSliderTrack">
+
+                    <!-- Slide 1 -->
+                    <article class="hero-slide active" style="background-image: url('./assets/banner-01.jpg');">
+                        <div class="hero-slide-overlay"></div>
+                        <div class="container hero-container">
+                            <div class="banner-heading hero-content">
+                                <!-- Date Pill / Badge -->
+                                <div class="hero-date-badge">
+                                    <span class="bullet-dot"></span>
+                                    <span class="date-text">18 - 22 JAN, 2026</span>
+                                </div>
+
+                                <!-- Main Bold Heading -->
+                                <h1 class="hero-title h1">
+                                    BUSINESS<br>
+                                    SUMMIT<br>
+                                    2026
+                                </h1>
+
+                                <!-- Location Line -->
+                                <p class="hero-location text-size">
+                                    23rd Avenue, 4th Street, Chicago, Illinois, USA
+                                </p>
+
+                                <!-- Call to Action Button -->
+                                <div class="hero-cta-wrap">
+                                    <a href="#discover" class="btn-discover button-style">
+                                        <span>DISCOVER MORE</span>
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Slide 2 -->
+                    <article class="hero-slide" style="background-image: url('./assets/banner-02.jpg');">
+                        <div class="hero-slide-overlay"></div>
+                        <div class="container hero-container">
+                            <div class="banner-heading hero-content">
+                                <!-- Date Pill / Badge -->
+                                <div class="hero-date-badge">
+                                    <span class="bullet-dot"></span>
+                                    <span class="date-text">24 - 28 FEB, 2026</span>
+                                </div>
+
+                                <!-- Main Bold Heading -->
+                                <h1 class="hero-title h1">
+                                    GLOBAL TECH<br>
+                                    &amp; INNOVATION<br>
+                                    EXPO 2026
+                                </h1>
+
+                                <!-- Location Line -->
+                                <p class="hero-location text-size">
+                                    Silicon Valley Convention Center, California, USA
+                                </p>
+
+                                <!-- Call to Action Button -->
+                                <div class="hero-cta-wrap">
+                                    <a href="#discover" class="btn-discover button-style">
+                                        <span>EXPLORE SESSIONS</span>
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Slide 3 -->
+                    <article class="hero-slide" style="background-image: url('./assets/banner-03.jpg');">
+                        <div class="hero-slide-overlay"></div>
+                        <div class="container hero-container">
+                            <div class="banner-heading hero-content">
+                                <!-- Date Pill / Badge -->
+                                <div class="hero-date-badge">
+                                    <span class="bullet-dot"></span>
+                                    <span class="date-text">15 - 19 MAR, 2026</span>
+                                </div>
+
+                                <!-- Main Bold Heading -->
+                                <h1 class="hero-title h1">
+                                    WORLD<br>
+                                    LEADERSHIP<br>
+                                    FORUM
+                                </h1>
+
+                                <!-- Location Line -->
+                                <p class="hero-location text-size">
+                                    Skyline Towers, Manhattan, New York, USA
+                                </p>
+
+                                <!-- Call to Action Button -->
+                                <div class="hero-cta-wrap">
+                                    <a href="#discover" class="btn-discover button-style">
+                                        <span>GET YOUR TICKETS</span>
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
             </div>
-        </div>
 
-        <!-- Hero Slider Prev / Next Controls -->
-        <div class="hero-slider-nav" aria-label="Hero slider controls">
-            <button class="hero-slider-btn prev-btn" id="heroPrevBtn" aria-label="Previous Slide">
-                <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="hero-slider-btn next-btn" id="heroNextBtn" aria-label="Next Slide">
-                <i class="bi bi-chevron-right"></i>
-            </button>
-        </div>
+            <!-- Hero Slider Prev / Next Controls -->
+            <div class="hero-slider-nav" aria-label="Hero slider controls">
+                <button class="hero-slider-btn prev-btn" id="heroPrevBtn" aria-label="Previous Slide">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="hero-slider-btn next-btn" id="heroNextBtn" aria-label="Next Slide">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
 
+            <!-- Slider Pagination Dots -->
+            <div class="hero-slider-dots" id="heroSliderDots" role="tablist" aria-label="Slide Selection">
+                <button class="hero-dot active" data-slide="0" aria-label="Slide 1" role="tab"
+                    aria-selected="true"></button>
+                <button class="hero-dot" data-slide="1" aria-label="Slide 2" role="tab" aria-selected="false"></button>
+                <button class="hero-dot" data-slide="2" aria-label="Slide 3" role="tab" aria-selected="false"></button>
+            </div>
+
+        </div><!-- /.hero-wrapper.max-width -->
     </section>
 
 
@@ -248,25 +282,31 @@
     <!-- about the event section -->
 
     <!-- About The Event Section -->
-    <section class="about-event-section max-width">
+    <section class="about-event-section">
 
         <div class="container">
             <!-- <h5 class="about-heading">About this event</h5> -->
-
+            <h1 class="about-heading">About Sapphire Technologies .</h1>
             <div class="about-event-wrapper">
 
                 <div class="right-content">
-                    <h1 class="h1">Sapphire Technologies is committed to delivering a White-Glove Service experience.
-                    </h1>
+
                     <p>At Sapphire Technologies, we are passionate about turning digital ideas into reality.
                         Specializing in cutting-edge technology solutions, we deliver high-quality services across
                         website development, mobile app development, digital marketing, and more. With a focus on
                         innovation and client satisfaction, we empower businesses to thrive in the digital age by
                         crafting customized solutions that align with their unique goals.
-
+                    </p>
+                    <p>
                         Founded with the belief that technology should be a bridge, not a barrier, we help businesses
                         navigate the complexities of the digital world with ease. Our experienced team of developers,
-                        designers, and strategists work together to deliver results that exceeds expectations.</p>
+                        designers, and strategists work together to deliver results that exceeds expectations.
+                    </p>
+
+                    <button class="about-event button-style"> About This Event
+                        <i class="fa-solid fa-arrow-right-long"></i>
+
+                    </button>
 
 
                 </div>
@@ -296,169 +336,271 @@
 
 
 
-    <!-- Speakers Section -->
-    <section class="speakers max-width">
+    <!-- Upcoming Events Section -->
+    <section class="speakers upcoming-events-section" id="events">
         <div class="container">
             <!-- Section Header -->
-            <div class="speakers-header text-center">
-                <span class="speakers-badge">upcoming events</span>
-                <h2 class="speakers-title">
-                    Our Amazing &amp; Learned<br>
-                    Event Speakers
+            <div class="speakers-header upcoming-events-header text-center">
+                <span class="speakers-badge button-style">upcoming events</span>
+                <h2 class="speakers-title upcoming-events-title">
+                    Explore Our Upcoming Events
                 </h2>
+                <p class="upcoming-events-subtitle">
+                    Like previous year this year we are arranging world marketing summit 2026. Its the gathering of all
+                    the big
+                </p>
             </div>
 
-            <!-- Speakers 8-Cards Grid -->
-            <div class="speakers-grid">
-                <!-- Speaker 1 -->
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap">
-                        <img src="./assets/cr1.png" alt="Cody Fisher" class="speaker-img">
-                        <button class="speaker-share-btn" aria-label="Share Cody Fisher profile">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </button>
-                    </div>
-                    <div class="speaker-bottom">
-                        <div class="speaker-date">
-                            <i class="bi bi-calendar-event"></i>
-                            <span>Jan 18, 2026</span>
+            <!-- Upcoming Events 3-Cards Grid (Row 1) -->
+            <div class="upcoming-events-grid">
+                <!-- Event Card 1 -->
+                <article class="event-showcase-card">
+                    <div class="event-card-img-wrap">
+                        <img src="./assets/upcoming-event-1.jpg" alt="Digital Marketing" class="event-card-img">
+                        <span class="event-date-badge">
+                            <i class="bi bi-calendar3"></i> March_23, 2018
+                        </span>
+                        <div class="event-desc-overlay">
+                            <p class="event-desc-text">
+                                Master cutting-edge digital marketing tactics, SEO strategies, and high-impact
+                                omnichannel brand campaigns.
+                            </p>
                         </div>
-                        <h3 class="speaker-title">Cody Fisher</h3>
-                        <p class="speaker-desc">Sr. Software Engineer</p>
                     </div>
-                </div>
+                    <div class="event-card-body">
+                        <div class="event-card-col-main">
+                            <h3 class="event-card-title">Digital Marketing</h3>
+                            <div class="event-card-footer">
+                                <a href="#event-details" class="btn-event-details">
+                                    <span>Details</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="event-card-col-meta">
+                            <ul class="event-meta-list">
+                                <li class="event-meta-item">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>54 Street, Newyork City</span>
+                                </li>
 
-                <!-- Speaker 2 -->
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap">
-                        <img src="./assets/cr2.png" alt="Floyd Miles" class="speaker-img">
-                        <button class="speaker-share-btn" aria-label="Share Floyd Miles profile">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </button>
-                    </div>
-                    <div class="speaker-bottom">
-                        <div class="speaker-date">
-                            <i class="bi bi-calendar-event"></i>
-                            <span>Jan 19, 2026</span>
+                                <li class="event-meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>9.00am - 10.00 am</span>
+                                </li>
+                            </ul>
                         </div>
-                        <h3 class="speaker-title">Floyd Miles</h3>
-                        <p class="speaker-desc">Chief Executive Officer</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- Speaker 3 -->
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap">
-                        <img src="./assets/cr3.png" alt="Esther Howard" class="speaker-img">
-                        <button class="speaker-share-btn" aria-label="Share Esther Howard profile">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </button>
-                    </div>
-                    <div class="speaker-bottom">
-                        <div class="speaker-date">
-                            <i class="bi bi-calendar-event"></i>
-                            <span>Jan 20, 2026</span>
+                <!-- Event Card 2 -->
+                <article class="event-showcase-card">
+                    <div class="event-card-img-wrap">
+                        <img src="./assets/upcoming-event-2.jpg" alt="Cultures of Creativity" class="event-card-img">
+                        <span class="event-date-badge">
+                            <i class="bi bi-calendar3"></i> March_23, 2018
+                        </span>
+                        <div class="event-desc-overlay">
+                            <p class="event-desc-text">
+                                Explore collaborative environments, creative problem-solving techniques, and
+                                breakthrough innovation culture.
+                            </p>
                         </div>
-                        <h3 class="speaker-title">Esther Howard</h3>
-                        <p class="speaker-desc">Marketing Manager</p>
                     </div>
-                </div>
+                    <div class="event-card-body">
+                        <div class="event-card-col-main">
+                            <h3 class="event-card-title">Cultures of Creativity</h3>
+                            <div class="event-card-footer">
+                                <a href="#event-details" class="btn-event-details">
+                                    <span>Details</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="event-card-col-meta">
+                            <ul class="event-meta-list">
+                                <li class="event-meta-item">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>54 Street, Newyork City</span>
+                                </li>
 
-                <!-- Speaker 4 -->
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap">
-                        <img src="./assets/cr4.png" alt="Devon Lane" class="speaker-img">
-                        <button class="speaker-share-btn" aria-label="Share Devon Lane profile">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </button>
-                    </div>
-                    <div class="speaker-bottom">
-                        <div class="speaker-date">
-                            <i class="bi bi-calendar-event"></i>
-                            <span>Jan 21, 2026</span>
+                                <li class="event-meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>9.00am - 10.00 am</span>
+                                </li>
+                            </ul>
                         </div>
-                        <h3 class="speaker-title">Devon Lane</h3>
-                        <p class="speaker-desc">Sr. Software Engineer</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- Speaker 5 -->
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap">
-                        <img src="./assets/cr5.png" alt="Cody Fisher" class="speaker-img">
-                        <button class="speaker-share-btn" aria-label="Share Cody Fisher profile">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </button>
-                    </div>
-                    <div class="speaker-bottom">
-                        <div class="speaker-date">
-                            <i class="bi bi-calendar-event"></i>
-                            <span>Jan 22, 2026</span>
+                <!-- Event Card 3 -->
+                <article class="event-showcase-card">
+                    <div class="event-card-img-wrap">
+                        <img src="./assets/upcoming-event-3.jpg" alt="Marketing Matters!" class="event-card-img">
+                        <span class="event-date-badge">
+                            <i class="bi bi-calendar3"></i> March_23, 2018
+                        </span>
+                        <div class="event-desc-overlay">
+                            <p class="event-desc-text">
+                                Discover the next wave of data-driven growth marketing, performance marketing, and
+                                creative storytelling.
+                            </p>
                         </div>
-                        <h3 class="speaker-title">Cody Fisher</h3>
-                        <p class="speaker-desc">Lead UX Designer</p>
                     </div>
-                </div>
+                    <div class="event-card-body">
+                        <div class="event-card-col-main">
+                            <h3 class="event-card-title">Marketing Matters!</h3>
+                            <div class="event-card-footer">
+                                <a href="#event-details" class="btn-event-details">
+                                    <span>Details</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="event-card-col-meta">
+                            <ul class="event-meta-list">
+                                <li class="event-meta-item">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>54 Street, Newyork City</span>
+                                </li>
 
-                <!-- Speaker 6 -->
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap">
-                        <img src="./assets/cr6.png" alt="Floyd Miles" class="speaker-img">
-                        <button class="speaker-share-btn" aria-label="Share Floyd Miles profile">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </button>
-                    </div>
-                    <div class="speaker-bottom">
-                        <div class="speaker-date">
-                            <i class="bi bi-calendar-event"></i>
-                            <span>Jan 22, 2026</span>
+                                <li class="event-meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>9.00am - 10.00 am</span>
+                                </li>
+                            </ul>
                         </div>
-                        <h3 class="speaker-title">Floyd Miles</h3>
-                        <p class="speaker-desc">AI Researcher &amp; Scientist</p>
                     </div>
-                </div>
+                </article>
+            </div>
 
-                <!-- Speaker 7 -->
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap">
-                        <img src="./assets/cr7.png" alt="Esther Howard" class="speaker-img">
-                        <button class="speaker-share-btn" aria-label="Share Esther Howard profile">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </button>
-                    </div>
-                    <div class="speaker-bottom">
-                        <div class="speaker-date">
-                            <i class="bi bi-calendar-event"></i>
-                            <span>Jan 23, 2026</span>
+            <!-- Upcoming Events 3-Cards Grid (Row 2) -->
+            <div class="upcoming-events-grid">
+                <!-- Event Card 4 -->
+                <article class="event-showcase-card">
+                    <div class="event-card-img-wrap">
+                        <img src="./assets/upcoming-event-4.jpg" alt="UI/UX Design Event" class="event-card-img">
+                        <span class="event-date-badge">
+                            <i class="bi bi-calendar3"></i> March_23, 2018
+                        </span>
+                        <div class="event-desc-overlay">
+                            <p class="event-desc-text">
+                                Deep dive into modern user interfaces, accessibility best practices, and next-generation
+                                design systems.
+                            </p>
                         </div>
-                        <h3 class="speaker-title">Esther Howard</h3>
-                        <p class="speaker-desc">VP of Product Strategy</p>
                     </div>
-                </div>
+                    <div class="event-card-body">
+                        <div class="event-card-col-main">
+                            <h3 class="event-card-title">UI/UX Design Event</h3>
+                            <div class="event-card-footer">
+                                <a href="#event-details" class="btn-event-details">
+                                    <span>Details</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="event-card-col-meta">
+                            <ul class="event-meta-list">
+                                <li class="event-meta-item">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>54 Street, Newyork City</span>
+                                </li>
 
-                <!-- Speaker 8 -->
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap">
-                        <img src="./assets/cr8.png" alt="Devon Lane" class="speaker-img">
-                        <button class="speaker-share-btn" aria-label="Share Devon Lane profile">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </button>
-                    </div>
-                    <div class="speaker-bottom">
-                        <div class="speaker-date">
-                            <i class="bi bi-calendar-event"></i>
-                            <span>Jan 24, 2026</span>
+                                <li class="event-meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>9.00am - 10.00 am</span>
+                                </li>
+                            </ul>
                         </div>
-                        <h3 class="speaker-title">Devon Lane</h3>
-                        <p class="speaker-desc">Cloud Solutions Architect</p>
                     </div>
-                </div>
+                </article>
+
+                <!-- Event Card 5 -->
+                <article class="event-showcase-card">
+                    <div class="event-card-img-wrap">
+                        <img src="./assets/upcoming-event-2.jpg" alt="Cultures of Creativity" class="event-card-img">
+                        <span class="event-date-badge">
+                            <i class="bi bi-calendar3"></i> March_23, 2018
+                        </span>
+                        <div class="event-desc-overlay">
+                            <p class="event-desc-text">
+                                Explore collaborative environments, creative problem-solving techniques, and innovative
+                                team workflows.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-card-col-main">
+                            <h3 class="event-card-title">Cultures of Creativity</h3>
+                            <div class="event-card-footer">
+                                <a href="#event-details" class="btn-event-details">
+                                    <span>Details</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="event-card-col-meta">
+                            <ul class="event-meta-list">
+                                <li class="event-meta-item">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>54 Street, Newyork City</span>
+                                </li>
+
+                                <li class="event-meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>9.00am - 10.00 am</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event Card 6 -->
+                <article class="event-showcase-card">
+                    <div class="event-card-img-wrap">
+                        <img src="./assets/upcoming-event-3.jpg" alt="Marketing Matters!" class="event-card-img">
+                        <span class="event-date-badge">
+                            <i class="bi bi-calendar3"></i> March_23, 2018
+                        </span>
+                        <div class="event-desc-overlay">
+                            <p class="event-desc-text">
+                                Discover the next wave of data-driven growth marketing, performance marketing, and
+                                creative storytelling.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-card-col-main">
+                            <h3 class="event-card-title">Marketing Matters!</h3>
+                            <div class="event-card-footer">
+                                <a href="#event-details" class="btn-event-details">
+                                    <span>Details</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="event-card-col-meta">
+                            <ul class="event-meta-list">
+                                <li class="event-meta-item">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>54 Street, Newyork City</span>
+                                </li>
+
+                                <li class="event-meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>9.00am - 10.00 am</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
 
-    <section class="get-expereince">
+    <section class="get-expereince" id="event-details">
         <div class="get-experience-main">
             <div class="container">
                 <div class="experience-content">
@@ -471,7 +613,7 @@
                         Like Previous Year This Year We Are Arranging World Marketing<br>
                         Summit 2026. Its The Gathering Of All The Big
                     </p>
-                    <a href="#event-details" class="btn-experience">
+                    <a href="#event-details" class="btn-experience button-style">
                         <span>SEE EVENT DETAILS</span>
                         <i class="bi bi-arrow-up-right"></i>
                     </a>
@@ -521,7 +663,45 @@
                     </svg>
                 </div>
                 <!-- Duplicate for infinite seamless scroll -->
-                <div class="marquee-content" aria-hidden="true">
+                <div class="marquee-content">
+                    <span class="marquee-text">INDUSTRY LEAD COMPANY</span>
+                    <svg class="marquee-star" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor"
+                        fill="none">
+                        <line x1="12" y1="2" x2="12" y2="22" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="2" y1="12" x2="22" y2="12" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="4.93" y1="19.07" x2="19.07" y2="4.93" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="8.17" y1="2.76" x2="15.83" y2="21.24" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="2.76" y1="8.17" x2="21.24" y2="15.83" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="2.76" y1="15.83" x2="21.24" y2="8.17" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="8.17" y1="21.24" x2="15.83" y2="2.76" stroke-width="2.6" stroke-linecap="round" />
+                    </svg>
+                    <span class="marquee-text">BUSINESS CONFERENCE</span>
+                    <svg class="marquee-star" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor"
+                        fill="none">
+                        <line x1="12" y1="2" x2="12" y2="22" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="2" y1="12" x2="22" y2="12" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="4.93" y1="19.07" x2="19.07" y2="4.93" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="8.17" y1="2.76" x2="15.83" y2="21.24" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="2.76" y1="8.17" x2="21.24" y2="15.83" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="2.76" y1="15.83" x2="21.24" y2="8.17" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="8.17" y1="21.24" x2="15.83" y2="2.76" stroke-width="2.6" stroke-linecap="round" />
+                    </svg>
+                    <span class="marquee-text">BOOK YOUR TICKET</span>
+                    <svg class="marquee-star" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor"
+                        fill="none">
+                        <line x1="12" y1="2" x2="12" y2="22" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="2" y1="12" x2="22" y2="12" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="4.93" y1="19.07" x2="19.07" y2="4.93" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="8.17" y1="2.76" x2="15.83" y2="21.24" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="2.76" y1="8.17" x2="21.24" y2="15.83" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="2.76" y1="15.83" x2="21.24" y2="8.17" stroke-width="2.6" stroke-linecap="round" />
+                        <line x1="8.17" y1="21.24" x2="15.83" y2="2.76" stroke-width="2.6" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="marquee-content">
                     <span class="marquee-text">INDUSTRY LEAD COMPANY</span>
                     <svg class="marquee-star" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor"
                         fill="none">
@@ -565,29 +745,30 @@
 
 
     <!-- Events Schedule Section -->
-    <section class="events-schedule max-width">
+    <section class="events-schedule ">
         <div class="container">
             <!-- Schedule Header -->
             <div class="schedule-header text-center">
-                <span class="schedule-badge">EVENT SCHEDULE</span>
+                <span class="schedule-badge button-style">EVENT SCHEDULE</span>
                 <h2 class="schedule-title">Our Events Schedule Plan</h2>
                 <p class="schedule-subtitle">
-                    Like previous year this year we are arranging world marketing<br>
-                    summit 2026. Its the gathering of all the big
+                    Like previous year this year we are arranging world marketing summit 2026. Its the gathering of all
+                    the big
                 </p>
 
                 <!-- Day Tabs Navigation -->
                 <div class="schedule-tabs" role="tablist" aria-label="Event Days">
-                    <button class="schedule-tab active" data-target="#day-1" role="tab" aria-selected="true">
+                    <button class="schedule-tab button-style active" data-target="#day-1" role="tab"
+                        aria-selected="true">
                         Day 01 - Jan 10, 2026
                     </button>
-                    <button class="schedule-tab" data-target="#day-2" role="tab" aria-selected="false">
+                    <button class="schedule-tab button-style" data-target="#day-2" role="tab" aria-selected="false">
                         Day 02 - Jan 11, 2026
                     </button>
-                    <button class="schedule-tab" data-target="#day-3" role="tab" aria-selected="false">
+                    <button class="schedule-tab button-style" data-target="#day-3" role="tab" aria-selected="false">
                         Day 03 - Jan 12, 2026
                     </button>
-                    <button class="schedule-tab" data-target="#day-4" role="tab" aria-selected="false">
+                    <button class="schedule-tab button-style" data-target="#day-4" role="tab" aria-selected="false">
                         Day 04 - Jan 13, 2026
                     </button>
                 </div>
@@ -619,7 +800,7 @@
                             </div>
                         </div>
                         <div class="schedule-action-col">
-                            <a href="#event-details" class="btn-schedule-details">
+                            <a href="#event-details" class="btn-schedule-details button-style">
                                 <span>DETAILS</span>
                                 <i class="bi bi-arrow-up-right"></i>
                             </a>
@@ -648,7 +829,7 @@
                             </div>
                         </div>
                         <div class="schedule-action-col">
-                            <a href="#event-details" class="btn-schedule-details">
+                            <a href="#event-details" class="btn-schedule-details button-style">
                                 <span>DETAILS</span>
                                 <i class="bi bi-arrow-up-right"></i>
                             </a>
@@ -677,7 +858,7 @@
                             </div>
                         </div>
                         <div class="schedule-action-col">
-                            <a href="#event-details" class="btn-schedule-details">
+                            <a href="#event-details" class="btn-schedule-details button-style">
                                 <span>DETAILS</span>
                                 <i class="bi bi-arrow-up-right"></i>
                             </a>
@@ -706,7 +887,7 @@
                             </div>
                         </div>
                         <div class="schedule-action-col">
-                            <a href="#event-details" class="btn-schedule-details">
+                            <a href="#event-details" class="btn-schedule-details button-style">
                                 <span>DETAILS</span>
                                 <i class="bi bi-arrow-up-right"></i>
                             </a>
@@ -737,7 +918,7 @@
                             </div>
                         </div>
                         <div class="schedule-action-col">
-                            <a href="#event-details" class="btn-schedule-details">
+                            <a href="#event-details" class="btn-schedule-details button-style">
                                 <span>DETAILS</span>
                                 <i class="bi bi-arrow-up-right"></i>
                             </a>
@@ -764,7 +945,7 @@
                             </div>
                         </div>
                         <div class="schedule-action-col">
-                            <a href="#event-details" class="btn-schedule-details">
+                            <a href="#event-details" class="btn-schedule-details button-style">
                                 <span>DETAILS</span>
                                 <i class="bi bi-arrow-up-right"></i>
                             </a>
@@ -795,7 +976,7 @@
                             </div>
                         </div>
                         <div class="schedule-action-col">
-                            <a href="#event-details" class="btn-schedule-details">
+                            <a href="#event-details" class=" button-style">
                                 <span>DETAILS</span>
                                 <i class="bi bi-arrow-up-right"></i>
                             </a>
@@ -826,7 +1007,7 @@
                             </div>
                         </div>
                         <div class="schedule-action-col">
-                            <a href="#event-details" class="btn-schedule-details">
+                            <a href="#event-details" class="btn-schedule-details button-style">
                                 <span>DETAILS</span>
                                 <i class="bi bi-arrow-up-right"></i>
                             </a>
@@ -839,22 +1020,22 @@
 
 
     <!-- Official Sponsors Section -->
-    <section class="sponsors-section max-width">
+    <section class="sponsors-section">
         <div class="container">
             <div class="sponsors-header">
                 <div class="sponsors-header-left">
-                    <span class="sponsors-badge">OUR OFFICIAL SPONSORS</span>
-                    <h2 class="sponsors-title">
-                        Trusted By Over 150<br>
-                        Organizations In More Than<br>
-                        50 Countries
-                    </h2>
-                </div>
-                <div class="sponsors-header-right">
-                    <a href="#become-sponsor" class="btn-sponsor">
+                    <span class="sponsors-badge button-style">OUR OFFICIAL SPONSORS</span>
+                    <a href="#become-sponsor" class="btn-sponsor button-style">
                         <span>BECOME A SPONSOR</span>
                         <i class="bi bi-arrow-up-right"></i>
                     </a>
+
+                </div>
+                <div class="sponsors-header-right">
+                    <h2 class="sponsors-title">
+                        Trusted By Over 150 Organizations In More Than
+                        50 Countries
+                    </h2>
                 </div>
             </div>
 
@@ -945,23 +1126,21 @@
         </div>
     </section>
 
-
-
+    <!-- Testimonials Section with Animated Wave Flow -->
 
 
     <!-- Blog Section -->
-    <section class="blog-section max-width">
+    <section class="blog-section" id="blog">
         <div class="container">
             <!-- Section Header -->
             <div class="blog-header text-center">
-                <span class="blog-badge">BLOG POST</span>
+                <span class="blog-badge button-style">BLOG POST</span>
                 <h2 class="blog-title">
-                    Insights From Business<br>
-                    Experts Meetup
+                    Insights From Business Experts Meetup
                 </h2>
                 <p class="blog-subtitle">
-                    Like previous year this year we are arranging world marketing<br>
-                    summit 2026. Its the gathering of all the big
+                    Like previous year this year we are arranging world marketing summit 2026. Its the gathering of all
+                    the big
                 </p>
             </div>
 
@@ -971,7 +1150,15 @@
                 <article class="blog-card">
                     <div class="blog-img-wrap">
                         <img src="./assets/blog-img1.jpg" alt="Civil Litigation Paper's Of Conference" class="blog-img">
-                        <span class="blog-category">BUSINESS</span>
+                        <div class="blog-img-overlay">
+                            <a href="#blog-single" class="blog-plus-btn"
+                                aria-label="View Civil Litigation Paper's Of Conference">
+                                <!-- <i class="bi bi-plus-lg"></i> -->
+
+                                i
+                            </a>
+                        </div>
+                        <span class="blog-category button-style">BUSINESS</span>
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-card-title">
@@ -994,7 +1181,14 @@
                 <article class="blog-card">
                     <div class="blog-img-wrap">
                         <img src="./assets/blog-img2.jpg" alt="Reinventing Experiences Of Creativity" class="blog-img">
-                        <span class="blog-category">CONFERENCE</span>
+                        <div class="blog-img-overlay">
+                            <a href="#blog-single" class="blog-plus-btn"
+                                aria-label="View Reinventing Experiences Of Creativity">
+                                <!-- <i class="bi bi-plus-lg"></i> -->
+                                i
+                            </a>
+                        </div>
+                        <span class="blog-category button-style">CONFERENCE</span>
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-card-title">
@@ -1018,7 +1212,14 @@
                     <div class="blog-img-wrap">
                         <img src="./assets/blog-img3.jpg" alt="The Save Soil, Save World Projects In 2026"
                             class="blog-img">
-                        <span class="blog-category">MARKETING</span>
+                        <div class="blog-img-overlay">
+                            <a href="#blog-single" class="blog-plus-btn"
+                                aria-label="View The Save Soil, Save World Projects In 2026">
+                                <!-- <i class="bi bi-plus-lg"></i> -->
+                                i
+                            </a>
+                        </div>
+                        <span class="blog-category button-style">MARKETING</span>
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-card-title">
@@ -1041,8 +1242,299 @@
     </section>
 
 
+    <section class="testimonials-section" id="testimonials">
+        <!-- Top Animated Wave Flow Divider -->
+        <div class="wave-divider wave-top" aria-hidden="true">
+            <svg class="wave-svg wave-svg-back" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,32L48,42.7C96,53,192,75,288,80C384,85,480,75,576,58.7C672,43,768,21,864,21.3C960,21,1056,43,1152,58.7C1248,75,1344,85,1392,90.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+            <svg class="wave-svg wave-svg-front" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,69.3C960,85,1056,107,1152,101.3C1248,96,1344,64,1392,48L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+        </div>
+
+        <!-- Ambient Wave Flow Background Streams -->
+        <div class="testimonials-wave-bg" aria-hidden="true">
+            <div class="wave-glow-orb orb-pink"></div>
+            <div class="wave-glow-orb orb-indigo"></div>
+            <svg class="ambient-wave-stream stream-1" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill-opacity="0.15"
+                    d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,181.3C960,203,1056,213,1152,197.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+            <svg class="ambient-wave-stream stream-2" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill-opacity="0.1"
+                    d="M0,96L60,117.3C120,139,240,181,360,186.7C480,192,600,160,720,138.7C840,117,960,107,1080,122.7C1200,139,1320,181,1380,202.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+
+        <div class="container position-relative">
+            <!-- Section Header -->
+            <div class="testimonials-header">
+                <span class="testimonials-badge button-style">ATTENDEE VOICES</span>
+                <h2 class="testimonials-title">What Leaders Say About Our Summits</h2>
+                <p class="testimonials-subtitle">
+                    Real experiences and breakthrough takeaways from marketing executives, creative directors, and
+                    founders who attended World Marketing Summit 2026.
+                </p>
+            </div>
+
+            <!-- Testimonials Slider Container -->
+            <div class="testimonials-slider-wrap">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Testimonial 1: Digital Marketing Track -->
+                    <div class="testimonial-card-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-top">
+                                <span class="testimonial-track-tag">Digital Marketing</span>
+                                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="testimonial-quote">
+                                "The deep dive into predictive AI marketing and omnichannel campaigns completely shifted
+                                our team's 2026 trajectory. We applied the ROI frameworks the very next Monday, seeing a
+                                34% drop in acquisition costs and record engagement."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar-wrap">
+                                    <img src="./assets/cr1.png" alt="Elena Rostova" class="author-avatar">
+                                    <!-- <span class="author-badge-verified" title="Verified Attendee">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </span> -->
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Elena Rostova</h4>
+                                    <p class="author-role">VP of Omnichannel Growth, Apex Media</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2: Cultures of Creativity -->
+                    <div class="testimonial-card-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-top">
+                                <span class="testimonial-track-tag">Cultures of Creativity</span>
+                                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="testimonial-quote">
+                                "The collaborative workshop on creative problem-solving was the most thought-provoking
+                                session I have attended in years. Breaking out of organizational silos with fellow
+                                creative directors sparked two major cross-platform product launches."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar-wrap">
+                                    <img src="./assets/cr2.png" alt="Dr. Sophia Chen" class="author-avatar">
+                                    <!-- <span class="author-badge-verified" title="Verified Attendee">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </span> -->
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Dr. Sophia Chen</h4>
+                                    <p class="author-role">Chief Innovation Officer, Lumina Labs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3: Marketing Matters! -->
+                    <div class="testimonial-card-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-top">
+                                <span class="testimonial-track-tag">Marketing Matters!</span>
+                                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="testimonial-quote">
+                                "World Marketing Summit gathers true decision-makers instead of generic talks. The CMO
+                                masterclasses and high-level strategy panels gave our leadership team tactical
+                                blueprints for scaling in uncertain economic markets."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar-wrap">
+                                    <img src="./assets/cr3.png" alt="Marcus Vance" class="author-avatar">
+                                    <!-- <span class="author-badge-verified" title="Verified Attendee">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </span> -->
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Marcus Vance</h4>
+                                    <p class="author-role">Head of Brand Strategy, Horizon Tech</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4: World Marketing Summit -->
+                    <div class="testimonial-card-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-top">
+                                <span class="testimonial-track-tag">Business Objective</span>
+                                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="testimonial-quote">
+                                "Unmatched energy and top-tier speaker lineups. The deep-dive into high-impact brand
+                                storytelling delivered more actionable value in 48 hours than any other executive summit
+                                this year. Highly recommended!"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar-wrap">
+                                    <img src="./assets/cr4.png" alt="Julian De Vries" class="author-avatar">
+                                    <!-- <span class="author-badge-verified" title="Verified Attendee">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </span> -->
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Julian De Vries</h4>
+                                    <p class="author-role">Global Creative Director, NexaCorp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2: Cultures of Creativity -->
+                    <div class="testimonial-card-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-top">
+                                <span class="testimonial-track-tag">Cultures of Creativity</span>
+                                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-quote-icon">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <p class="testimonial-quote">
+                                "The collaborative workshop on creative problem-solving was the most thought-provoking
+                                session I have attended in years. Breaking out of organizational silos with fellow
+                                creative directors sparked two major cross-platform product launches."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar-wrap">
+                                    <img src="./assets/cr2.png" alt="Dr. Sophia Chen" class="author-avatar">
+                                    <!-- <span class="author-badge-verified" title="Verified Attendee">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </span> -->
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Dr. Sophia Chen</h4>
+                                    <p class="author-role">Chief Innovation Officer, Lumina Labs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonials Navigation Controls -->
+                <div class="testimonials-controls">
+                    <button class="testimonial-nav-btn btn-prev" id="testimonialPrevBtn"
+                        aria-label="Previous Testimonial">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+                    <div class="testimonial-dots" id="testimonialDots" role="tablist" aria-label="Testimonial slides">
+                    </div>
+                    <button class="testimonial-nav-btn btn-next" id="testimonialNextBtn" aria-label="Next Testimonial">
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Animated Wave Flow Divider -->
+        <div class="wave-divider wave-bottom" aria-hidden="true">
+            <svg class="wave-svg wave-svg-back" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,69.3C960,85,1056,107,1152,101.3C1248,96,1344,64,1392,48L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z">
+                </path>
+            </svg>
+            <svg class="wave-svg wave-svg-front" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,32L48,42.7C96,53,192,75,288,80C384,85,480,75,576,58.7C672,43,768,21,864,21.3C960,21,1056,43,1152,58.7C1248,75,1344,85,1392,90.7L1440,96L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="subscribe-form container">
+            <div class="subscribe-wrapper">
+                <!-- Left: Mail Icon & Info -->
+                <div class="subscribe-left">
+                    <div class="subscribe-icon-wrap" aria-hidden="true">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                    <div class="subscribe-text-content">
+                        <h3 class="subscribe-title">Stay connected with Sapphire</h3>
+                        <p class="subscribe-subtitle">Be the first to know about new products, exclusive tips and
+                            exclusive offers.</p>
+                    </div>
+                </div>
+
+                <!-- Center: Email Input & Subscribe Button -->
+                <form class="subscribe-form-action" onsubmit="event.preventDefault();">
+                    <div class="subscribe-input-group">
+                        <input type="email" class="subscribe-input" placeholder="Enter your email address" required
+                            aria-label="Enter your email address">
+                        <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+                    </div>
+                </form>
+
+                <!-- Right: Botanical Decoration -->
+                <!-- <div class="subscribe-decor" aria-hidden="true">
+                    <img src="./assets/cotton-flowers.jpg" alt="Botanical cotton flower decoration"
+                        class="subscribe-decor-img">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
     <!-- Main Site Footer -->
-    <footer class="site-footer max-width">
+    <footer class="site-footer" id="contact">
+
+
         <div class="container">
             <div class="footer-top">
                 <!-- Col 1: Brand & Contact -->
@@ -1055,8 +1547,8 @@
                         Middlest 2 East 42nd Streearketplace<br>
                         New York, NY 10017
                     </p>
-                    <a href="tel:+1235590067990" class="footer-phone">+123(55) 90067990</a>
-                    <a href="mailto:info@gmail.com" class="footer-email">info@gmail.com</a>
+                    <!-- <a href="tel:+1235590067990" class="footer-phone">+123(55) 90067990</a>
+                    <a href="mailto:info@gmail.com" class="footer-email">info@gmail.com</a> -->
 
 
                     <div class="footer-socials">
@@ -1080,21 +1572,51 @@
                     <div class="quick-lin">
                         <h3 class="footer-title">Quick links</h3>
                         <ul class="footer-links-list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="speakers.html">Events</a></li>
-                            <li><a href="#agenda">Blogs</a></li>
-                            <li><a href="#sponsors"> Gallery</a></li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="speakers.html">Events</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#agenda">Blogs</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#sponsors"> Gallery</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="quick-lin">
-                        <h3 class="footer-title">Contact Information</h3>
+                        <h3 class="footer-title">Quick links</h3>
                         <ul class="footer-links-list">
-                            <li><a href="index.html">Address : XXXXXXXXXXXXX</a></li>
-                            <li><a href="about.html">Email Id : [EMAIL_ADDRESS]</a></li>
-                            <li><a href="speakers.html">Contact No : 1234567890</a></li>
-                            <li><a href="#agenda">Website : https://sapphireitsg.com/</a></li>
-                            <li><a href="#sponsors"> Timing : 21 Sep 2026</a></li>
+
+
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Cookies Policy</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#contact">Contact Us</a>
+                            </li>
+
+
                         </ul>
                     </div>
                 </div>
@@ -1102,26 +1624,31 @@
 
                 <!-- Col 3: Newsletter -->
                 <div class="footer-col footer-col-newsletter">
-                    <h3 class="footer-title">Quick links</h3>
-                    <p class="footer-newsletter-desc">
-                        Our expertise, as well as our passion for web design, sets us apart from other agencies.
-                    </p>
-                    <form class="footer-newsletter-form" onsubmit="event.preventDefault();">
-                        <div class="newsletter-input-wrap">
-                            <input type="email" placeholder="E-mail Address" required class="newsletter-input"
-                                aria-label="E-mail Address">
-                            <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
-                                <i class="bi bi-arrow-right"></i>
-                            </button>
-                        </div>
-                    </form>
+                    <h3 class="footer-title">Contact Information</h3>
+                    <div class="footer-links-list">
+
+
+                        <li><a href="about.html">
+                                <i class="bi bi-envelope-arrow-up"></i>
+                                : info@sapphireitsg.com</a></li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/r3Q6iFM3CyHRwmzE9" target="_self">
+                                <i class="bi bi-geo-alt"></i> :Golden-I, Office No. C-203 ,Noida</a>
+                        </li>
+                        <li><a href="speakers.html"><i class="bi bi-telephone-outbound"></i> :+919311439117</a></li>
+
+                        <li><a href="#agenda"><i class="bi bi-browser-chrome"></i> : https://sapphireitsg.com/</a></li>
+                        <li><a href="#sponsors"> <i class="bi bi-alarm"></i> : 21 Sep 2026</a></li>
+
+
+                    </div>
                 </div>
             </div>
 
             <!-- Bottom Bar: Copyright & Socials & Scroll Top -->
             <div class="footer-bottom">
                 <p class="footer-copyright">
-                    Copyright &copy; 2026 sapphire.com. All rights reserved.
+                    Copyrights © 2026. All rights reserved by Sapphire Technologies
                 </p>
                 <div class="footer-bottom-right">
 
