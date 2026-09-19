@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Sapphire Technologies - Dedicated About Page Stylesheet (about.css)
-   Built with Global Style Tokens, CSS Variables & Fluid Motion Transforms
-   ========================================================================== */
-
-/* --- CSS Reset --- */
 * {
     margin: 0;
     padding: 0;
@@ -36,15 +30,11 @@ img {
     display: block;
 }
 
-/* ==========================================================================
-   Global Style Tokens & Design System (Matching style.css)
-   ========================================================================== */
 :root {
-    /* --- Typography & Fonts --- */
-    --text-font: 'Plus Jakarta Sans', sans-serif;
+
+    --text-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     --font-primary: var(--text-font);
 
-    /* --- Global Font Weights --- */
     --fw-extrabold: 800;
     --fw-bold: 700;
     --fw-semibold: 600;
@@ -58,15 +48,36 @@ img {
     --mid-weight: var(--fw-regular);
     --t-weight: var(--fw-light);
 
-    /* --- Global Font Sizes --- */
-    --text-size: 1.05rem;
-    --subtext-size: 0.95rem;
-    --heading-size: 1rem;
-    --heading-l-size: 1.125rem;
-    --heading-xl-size: 1.25rem;
-    --heading-xxl-size: 2.375rem;
+    --lh-none: 1;
+    --lh-tight: 1.15;
+    --lh-heading: 1.25;
+    --lh-sub: 1.45;
+    --lh-body: 1.65;
+    --lh-loose: 1.8;
+    --text-line: var(--lh-body);
 
-    /* --- Core Brand Color Palette --- */
+    --fs-hero: 52px;
+    --fs-h1: 44px;
+    --fs-h2: 36px;
+    --fs-h3: 28px;
+    --fs-h4: 22px;
+    --fs-h5: 18px;
+    --fs-h6: 16px;
+    --fs-lead: 17px;
+    --fs-base: 16px;
+    --fs-sm: 14px;
+    --fs-xs: 14px;
+    --fs-btn: 14.5px;
+    --btn-padding: 10px 24px;
+
+    --text-size: var(--fs-base);
+    --subtext-size: var(--fs-sm);
+    --heading-size: var(--fs-h5);
+    --heading-l-size: var(--fs-h4);
+    --heading-xl-size: var(--fs-h3);
+    --heading-xxl-size: var(--fs-h2);
+    --fs-hero-title: var(--fs-hero);
+
     --banner-color: #1f0662;
     --banner-color-light: #2a1175;
     --banner-color-dark: #140342;
@@ -83,7 +94,6 @@ img {
     --bg-light: #f8fafc;
     --bg-alt: #f1f5f9;
 
-    /* --- Spacings & Radii --- */
     --mb: 70px;
     --pb: 70px;
     --radius-pill: 10px;
@@ -91,11 +101,9 @@ img {
     --radius-card: 10px;
     --radius-full: 10px;
 
-    /* --- Easing Curves --- */
     --ease-out-fluid: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* --- Subscribe Form Semantic Tokens --- */
     --subscribe-bg: var(--white);
     --subscribe-title-color: var(--black);
     --subscribe-sub-color: var(--text-color);
@@ -109,6 +117,59 @@ img {
     --subscribe-btn-hover: #140342;
     --subscribe-btn-color: var(--white);
     --subscribe-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+i.bi,
+[class^="bi-"],
+[class*=" bi-"],
+i.fa,
+i.fas,
+i.far,
+i.fab,
+i.fa-solid,
+i.fa-brands,
+[class^="fa-"],
+[class*=" fa-"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before,
+.fa::before,
+[class^="fa-"]::before,
+[class*=" fa-"]::before {
+    font-size: inherit;
+    line-height: 1;
+}
+
+.icon-xs {
+    font-size: 11px !important;
+}
+
+.icon-sm {
+    font-size: 13px !important;
+}
+
+.icon-md {
+    font-size: 16px !important;
+}
+
+.icon-lg {
+    font-size: 20px !important;
+}
+
+.icon-xl {
+    font-size: 24px !important;
+}
+
+.icon-2xl {
+    font-size: 32px !important;
 }
 
 html,
@@ -126,7 +187,6 @@ body {
     line-height: 1.7;
 }
 
-/* Ensure all major sections clip lateral overflows */
 section,
 .site-header,
 .about-hero-section,
@@ -149,59 +209,65 @@ section,
     margin: 0 auto;
 }
 
-/* ==========================================================================
-   Typography & Utilities
-   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: var(--text-font);
+    color: inherit;
+    line-height: var(--lh-heading);
+    margin-bottom: 0.4em;
+    letter-spacing: -0.015em;
+}
+
 .h1,
 h1 {
-    font-size: 48px;
-    font-weight: var(--h-weight);
-    font-family: var(--text-font);
-    color: var(--white);
-    line-height: 1.15;
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-extrabold);
+    line-height: var(--lh-tight);
 }
 
 .h2,
 h2 {
-    font-size: 38px;
-    font-weight: var(--h-weight);
-    font-family: var(--text-font);
-    color: var(--black);
-    line-height: 1.25;
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-heading);
 }
 
 .h3,
 h3 {
-    font-size: 30px;
-    font-weight: var(--sh-weight);
-    font-family: var(--text-font);
-    color: var(--black);
-    line-height: 1.3;
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-heading);
 }
 
 .h4,
 h4 {
-    font-size: 22px;
-    font-weight: var(--sh-weight);
-    font-family: var(--text-font);
-    color: var(--black);
-    line-height: 1.35;
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-sub);
 }
 
 .h5,
 h5 {
-    font-size: 18px;
-    font-weight: var(--mid-weight);
-    font-family: var(--text-font);
-    line-height: 1.5;
+    font-size: var(--fs-h5);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-sub);
 }
 
 .h6,
 h6 {
-    font-size: 16px;
-    font-weight: var(--mid-weight);
-    font-family: var(--text-font);
-    line-height: 1.5;
+    font-size: var(--fs-h6);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-sub);
 }
 
 .text-gradient {
@@ -235,7 +301,7 @@ h6 {
 .section-sub-heading {
     font-size: 1.1rem;
     color: var(--text-color);
-    /* max-width: 680px; */
+
     margin: 0;
     line-height: 1.7;
 }
@@ -245,7 +311,6 @@ h6 {
     margin-bottom: 60px;
 }
 
-/* Reusable Pill Buttons */
 .button-style {
     display: inline-flex;
     align-items: center;
@@ -288,9 +353,6 @@ h6 {
     transform: translateY(-3px);
 }
 
-/* ==========================================================================
-   Header & Navigation (Identical with index.html)
-   ========================================================================== */
 .site-header {
     position: sticky;
     top: 0;
@@ -317,7 +379,6 @@ h6 {
     justify-content: space-between;
 }
 
-/* Logo */
 .brand-logo {
     display: inline-flex;
     align-items: center;
@@ -358,7 +419,6 @@ h6 {
     text-transform: uppercase;
 }
 
-/* Nav Menu */
 .desktop-nav {
     display: flex;
     align-items: center;
@@ -402,7 +462,6 @@ h6 {
     transform: rotate(180deg);
 }
 
-/* Dropdown */
 .dropdown-menu-custom {
     position: absolute;
     top: 100%;
@@ -445,7 +504,6 @@ h6 {
     padding-left: 24px;
 }
 
-/* Actions */
 .nav-actions {
     display: flex;
     align-items: center;
@@ -517,7 +575,6 @@ h6 {
     transform: translateY(-2px);
 }
 
-/* Mobile Drawer */
 .mobile-drawer {
     position: fixed;
     top: 0;
@@ -626,11 +683,11 @@ h6 {
 }
 
 .mobile-nav-list li a.active {
-    background: linear-gradient(90deg, rgba(228, 73, 140, 0.3) 0%, rgba(228, 73, 140, 0.06) 100%);
-    border-left: 3px solid var(--pink);
+    background: linear-gradient(90deg, rgba(180, 178, 178, 0.5) 0%, rgba(228, 73, 140, 0.06) 100%);
+    /* border-left: 3px solid var(--pink); */
     color: #ffffff;
     font-weight: 800;
-    text-shadow: 0 0 12px rgba(228, 73, 140, 0.6);
+    text-shadow: 0 0 12px rgba(145, 145, 145, 0.568);
 }
 
 .mobile-drawer-socials {
@@ -687,9 +744,6 @@ h6 {
     visibility: visible;
 }
 
-/* ==========================================================================
-   1. Hero Breadcrumb Section with Ambient Glow Animation
-   ========================================================================== */
 .about-hero-section {
     position: relative;
     background-color: var(--banner-color);
@@ -758,11 +812,11 @@ h6 {
     align-items: center;
     gap: 12px;
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.7);
-    background: rgba(0, 0, 0, 0.18);
+    color: rgba(255, 255, 255, 1);
+    background: black;
     padding: 8px 22px;
     border-radius: var(--radius-full);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid black;
 }
 
 .about-breadcrumbs a {
@@ -787,9 +841,6 @@ h6 {
     font-weight: 600;
 }
 
-/* ==========================================================================
-   2. Section 1: About Sapphire Technologies (Two-Column Interactive Grid)
-   ========================================================================== */
 .about-intro-section {
     padding: 100px 0;
     background-color: var(--white);
@@ -875,7 +926,7 @@ h6 {
 }
 
 .mini-card-text p {
-    font-size: 13.5px;
+    font-size: 16px;
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
@@ -888,7 +939,6 @@ h6 {
     flex-wrap: wrap;
 }
 
-/* Visual Column & Floating Badges */
 .visual-card-wrapper {
     position: relative;
     max-width: 500px;
@@ -994,9 +1044,6 @@ h6 {
     color: var(--pink);
 }
 
-/* ==========================================================================
-   3. Section 2: White-Glove Service Experience (Featured Commitment Banner)
-   ========================================================================== */
 .about-whiteglove-section {
     padding: 40px 0 80px;
     background-color: var(--white);
@@ -1117,9 +1164,6 @@ h6 {
     color: var(--pink);
 }
 
-/* ==========================================================================
-   4. Section 3: Strategic Pillars (Our Mission, Our Vision, Why Choose Us)
-   ========================================================================== */
 .about-pillars-section {
     padding: 90px 0;
     background-color: var(--bg-light);
@@ -1208,7 +1252,6 @@ h6 {
     transform: scale(1.05);
 }
 
-/* Why Choose Us Checklist */
 .why-choose-list {
     display: flex;
     flex-direction: column;
@@ -1252,9 +1295,6 @@ h6 {
     font-weight: 700;
 }
 
-/* ==========================================================================
-   5. Section 4: Achievements & IT Support Counters
-   ========================================================================== */
 .about-stats-section {
     background-color: var(--banner-color);
     background-image:
@@ -1326,7 +1366,7 @@ h6 {
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.05em;
-    /* box-shadow: 0 10px 24px var(--pink-shadow); */
+
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -1347,12 +1387,11 @@ h6 {
     text-align: center;
 }
 
-/* Recessed cut-box socket cell */
 .counter-cell-socket {
     position: relative;
     border-radius: var(--radius-card);
     background: rgba(14, 2, 48, 0.45);
-    /* border: 1.5px dashed rgba(255, 255, 255, 0.18); */
+
     box-shadow: inset 0 8px 24px rgba(0, 0, 0, 0.45);
     perspective: 1000px;
     display: flex;
@@ -1371,7 +1410,6 @@ h6 {
     transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.45s ease, border-color 0.45s ease, background 0.45s ease;
 }
 
-/* Cell-pop scroll-triggered keyframe animation: pops up high out of cell then fits back into own cell */
 .animation-element.cell-pop {
     opacity: 0;
     transform: translateY(60px) scale(0.9);
@@ -1390,34 +1428,33 @@ h6 {
 
     45% {
         opacity: 1;
-        /* Pulling way up out of the cell socket */
+
         transform: translateY(-38px) scale(1.06);
         box-shadow: 0 32px 65px rgba(0, 0, 0, 0.55), 0 0 35px rgb(255, 255, 255);
         border-color: rgb(255, 255, 255);
     }
 
     75% {
-        /* Drops back down slightly below resting position into the cut box */
+
         transform: translateY(8px) scale(0.985);
         box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
         border-color: rgba(255, 255, 255, 0.3);
     }
 
     90% {
-        /* Gentle micro rebound */
+
         transform: translateY(-3px) scale(1.008);
     }
 
     100% {
         opacity: 1;
-        /* Fits flush and locked inside its own cell */
+
         transform: translateY(0) scale(1);
         box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
         border-color: rgba(255, 255, 255, 0.22);
     }
 }
 
-/* Interactive hover: pulling up out of cell, snapping back on mouse-out */
 .counter-cell-socket:hover .counter-box {
     transform: translateY(-24px) scale(1.05);
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.08) 100%);
@@ -1469,9 +1506,6 @@ h6 {
     letter-spacing: 0.02em;
 }
 
-/* ==========================================================================
-   6. Section 5: Our Work Process (4-Step Sequential Cards)
-   ========================================================================== */
 .about-process-section {
     padding: 100px 0;
     background-color: var(--white);
@@ -1481,7 +1515,7 @@ h6 {
 .process-sub-heading {
     font-size: 1.15rem;
     color: var(--text-color);
-    /* max-width: 680px; */
+
     margin: 0 auto;
     font-weight: 400;
     line-height: 1.7;
@@ -1497,12 +1531,11 @@ h6 {
     gap: 28px;
 }
 
-/* Outer Cut Box / Recessed Cell Socket */
 .process-cell-socket {
     position: relative;
     border-radius: var(--radius-card);
     background: linear-gradient(160deg, #edf2f9 0%, #e2eaf5 100%);
-    /* border: 1.5px dashed rgba(31, 6, 98, 0.2); */
+
     box-shadow: inset 0 8px 24px rgba(31, 6, 98, 0.1), inset 0 2px 6px rgba(0, 0, 0, 0.04);
     display: flex;
     min-height: 100%;
@@ -1515,7 +1548,6 @@ h6 {
     box-shadow: inset 0 10px 28px rgba(31, 6, 98, 0.14), inset 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Recessed Cut Bed Floor (revealed when card pulls out of cell) */
 .cell-cut-bed {
     position: absolute;
     inset: 0;
@@ -1570,7 +1602,6 @@ h6 {
     font-size: 12px;
 }
 
-/* The Foreground Process Card (fits in socket, pops out on scroll & hover) */
 .process-card {
     background: var(--white);
     border: 1.5px solid rgba(31, 6, 98, 0.12);
@@ -1587,13 +1618,11 @@ h6 {
     will-change: transform, box-shadow, opacity;
 }
 
-/* Initial state before scroll in-view: recessed deep into cell */
 .animation-element.cell-card-pop {
     opacity: 0;
     transform: translateY(65px) scale(0.88);
 }
 
-/* Scroll Animation: Pops up high out of process cell socket then locks snugly flush (matching counter-cell-socket) */
 .animation-element.cell-card-pop.in-view {
     animation: processCardPopFromCell 1.25s cubic-bezier(0.22, 1, 0.36, 1) var(--proc-delay, 0s) forwards;
 }
@@ -1607,34 +1636,33 @@ h6 {
 
     45% {
         opacity: 1;
-        /* Pulling up high out of the cell socket */
+
         transform: translateY(-38px) scale(1.06);
         box-shadow: 0 32px 65px rgba(31, 6, 98, 0.22), 0 0 32px rgba(31, 6, 98, 0.15);
         border-color: var(--banner-color);
     }
 
     75% {
-        /* Drops back down slightly below resting position into the cut box */
+
         transform: translateY(8px) scale(0.985);
         box-shadow: 0 8px 18px rgba(31, 6, 98, 0.1);
         border-color: rgba(31, 6, 98, 0.25);
     }
 
     90% {
-        /* Gentle micro rebound */
+
         transform: translateY(-3px) scale(1.008);
     }
 
     100% {
         opacity: 1;
-        /* Fits flush and locked inside its own socket */
+
         transform: translateY(0) scale(1);
         box-shadow: 0 10px 25px rgba(31, 6, 98, 0.06);
         border-color: rgba(31, 6, 98, 0.12);
     }
 }
 
-/* Interactive Hover: Pull out of cell socket smoothly and snap back on mouse leave */
 .process-cell-socket:hover .process-card,
 .process-cell-socket:hover .process-card.animation-element.cell-card-pop.in-view {
     transform: translateY(-24px) scale(1.05);
@@ -1710,9 +1738,6 @@ h6 {
     margin: 0;
 }
 
-/* ==========================================================================
-   7. Section 6: Client Trust & Logo Carousel (Loved By 200+ Customers)
-   ========================================================================== */
 .about-clients-section {
     padding: 90px 0;
     background: var(--bg-alt);
@@ -1755,7 +1780,6 @@ h6 {
     transform: translateY(-2px);
 }
 
-/* Infinite Marquee Track - Dual-Direction System */
 .logo-marquee-wrapper {
     margin-top: 45px;
     width: 100%;
@@ -1849,9 +1873,6 @@ h6 {
     filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.1));
 }
 
-/* ==========================================================================
-   8. Section 7: Let's Talk Contact Grid (Dynamic Ambient Gradient & Interactive Channel Animations)
-   ========================================================================== */
 .about-letstalk-section {
     padding: 100px 0;
     position: relative;
@@ -1875,7 +1896,6 @@ h6 {
     }
 }
 
-/* Ambient Floating Glow Spheres for Background Depth */
 .about-letstalk-section::before {
     content: '';
     position: absolute;
@@ -1930,7 +1950,6 @@ h6 {
     z-index: 2;
 }
 
-/* Glassmorphic Contact Card with Shimmer Beam */
 .letstalk-card {
     background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(12px);
@@ -1948,7 +1967,6 @@ h6 {
     z-index: 1;
 }
 
-/* Diagonal Shimmer Light Sweep on Hover */
 .letstalk-card::before {
     content: '';
     position: absolute;
@@ -1975,7 +1993,6 @@ h6 {
     box-shadow: 0 20px 45px rgba(31, 6, 98, 0.12), 0 0 25px rgba(41, 19, 29, 0.1);
 }
 
-/* Floating Icon Box & Animated Ripple Wave */
 .talk-icon-box {
     width: 96px;
     height: 96px;
@@ -2025,7 +2042,6 @@ h6 {
     }
 }
 
-/* Base Icon Styling */
 .talk-icon-img {
     width: 100%;
     height: 100%;
@@ -2033,14 +2049,12 @@ h6 {
     transition: transform 0.35s ease;
 }
 
-/* Fallback vert-move support */
 .vert-move {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-/* Resting State: Staggered natural breathing float */
 .anim-call {
     animation: talkFloat 2.8s infinite ease-in-out alternate;
 }
@@ -2067,11 +2081,6 @@ h6 {
     }
 }
 
-/* ==========================================================================
-   Channel-Specific Interactive Hover Animations
-   ========================================================================== */
-
-/* 1. Phone Card: Telephone Wiggle / Vibration Ring */
 .letstalk-card.card-talk-call:hover .anim-call,
 .letstalk-card:nth-child(1):hover .talk-icon-img {
     animation: phoneRing 0.65s ease-in-out infinite;
@@ -2109,7 +2118,6 @@ h6 {
     }
 }
 
-/* 2. Mail Card: Paper Plane Floating Flutter */
 .letstalk-card.card-talk-mail:hover .anim-mail,
 .letstalk-card:nth-child(2):hover .talk-icon-img {
     animation: mailFlutter 0.85s ease-in-out infinite alternate;
@@ -2129,7 +2137,6 @@ h6 {
     }
 }
 
-/* 3. Skype Card: 3D Camera Rotation & Pulse */
 .letstalk-card.card-talk-skype:hover .anim-skype,
 .letstalk-card:nth-child(3):hover .talk-icon-img {
     animation: skypeSpinPulse 1.2s ease-in-out infinite;
@@ -2149,7 +2156,6 @@ h6 {
     }
 }
 
-/* 4. Chat Card: Energetic Heartbeat / Message Pop Bounce */
 .letstalk-card.card-talk-chat:hover .anim-chat,
 .letstalk-card:nth-child(4):hover .talk-icon-img {
     animation: chatHeartbeat 0.9s ease-in-out infinite;
@@ -2175,7 +2181,6 @@ h6 {
     }
 }
 
-/* Card Typography & Interactive Animated Link */
 .talk-title {
     font-size: 19px;
     font-weight: 700;
@@ -2219,9 +2224,6 @@ h6 {
     left: 0;
 }
 
-/* ==========================================================================
-   9. Section 8: Global Presence & International Offices
-   ========================================================================== */
 .about-presence-section {
     padding: 95px 0;
     background: var(--bg-light);
@@ -2247,7 +2249,6 @@ h6 {
     z-index: 1;
 }
 
-/* Flag Layer with Black Overlay (0.5) - Slides in from Right to Left on Hover */
 .presence-card::before {
     content: '';
     position: absolute;
@@ -2271,11 +2272,6 @@ h6 {
     opacity: 1;
 }
 
-/* ==========================================================================
-   Background Flags by Country (Slides from Right with 0.5 Black Overlay)
-   ========================================================================== */
-
-/* 1. India Head Office */
 .presence-card:nth-child(1)::before,
 .presence-card.card-india::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://flagcdn.com/w640/in.png");
@@ -2287,7 +2283,6 @@ h6 {
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 25px rgba(255, 153, 51, 0.25);
 }
 
-/* 2. Saudi Arabia Office */
 .presence-card:nth-child(2)::before,
 .presence-card.card-saudi::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://flagcdn.com/w640/sa.png");
@@ -2299,7 +2294,6 @@ h6 {
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 25px rgba(0, 108, 53, 0.25);
 }
 
-/* 3. Canada Office */
 .presence-card:nth-child(3)::before,
 .presence-card.card-canada::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://flagcdn.com/w640/ca.png");
@@ -2311,7 +2305,6 @@ h6 {
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 25px rgba(216, 6, 33, 0.25);
 }
 
-/* 4. Dubai (UAE) Office */
 .presence-card:nth-child(4)::before,
 .presence-card.card-uae::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://flagcdn.com/w640/ae.png");
@@ -2323,7 +2316,6 @@ h6 {
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 25px rgba(0, 115, 47, 0.25);
 }
 
-/* 5. Kuwait Office */
 .presence-card:nth-child(5)::before,
 .presence-card.card-kuwait::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://flagcdn.com/w640/kw.png");
@@ -2335,7 +2327,6 @@ h6 {
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 25px rgba(0, 122, 61, 0.25);
 }
 
-/* 6. London (UK) Office */
 .presence-card:nth-child(6)::before,
 .presence-card.card-uk::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://flagcdn.com/w640/gb.png");
@@ -2347,7 +2338,6 @@ h6 {
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 25px rgba(1, 33, 105, 0.3);
 }
 
-/* Card Content & Dynamic Black to White Hover Transition */
 .presence-flag-icon {
     width: 46px;
     height: 46px;
@@ -2419,9 +2409,6 @@ h6 {
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* ==========================================================================
-   10. Call To Action Banner
-   ========================================================================== */
 .about-cta-section {
     padding: 40px 0 100px;
     background-color: var(--bg-light);
@@ -2459,7 +2446,7 @@ h6 {
     color: var(--white);
     display: block;
     margin-bottom: 12px;
-    /* border: 1px solid white; */
+
 }
 
 .cta-heading {
@@ -2498,9 +2485,6 @@ h6 {
     box-shadow: 0 16px 32px rgba(255, 255, 255, 0.3);
 }
 
-/* ==========================================================================
-   Subscribe Form Banner (Floating above footer)
-   ========================================================================== */
 .subscribe-form {
     margin-bottom: -50px;
     position: relative;
@@ -2520,7 +2504,6 @@ h6 {
     overflow: hidden;
 }
 
-/* Left: Icon & Text Info */
 .subscribe-left {
     display: flex;
     align-items: center;
@@ -2572,7 +2555,6 @@ h6 {
     margin: 0;
 }
 
-/* Center / Form Input & Action */
 .subscribe-form-action {
     flex: 1;
     max-width: 440px;
@@ -2633,9 +2615,6 @@ h6 {
     box-shadow: 0 4px 14px var(--pink-shadow);
 }
 
-/* ==========================================================================
-   11. Main Site Footer (Matching index.html)
-   ========================================================================== */
 .site-footer {
     position: relative;
     background-color: #07051a;
@@ -2653,7 +2632,6 @@ h6 {
     margin-bottom: 30px;
 }
 
-/* Col 1: Brand */
 .footer-col-brand .brand-logo {
     display: inline-flex;
     align-items: center;
@@ -2706,7 +2684,6 @@ h6 {
     grid-template-columns: 1fr 1fr;
 }
 
-/* Col 2: Quick Links */
 .footer-title {
     font-family: var(--text-font);
     font-size: 20px;
@@ -2759,7 +2736,6 @@ h6 {
     padding: 5px;
 }
 
-/* Bottom Bar */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 10px;
@@ -2837,11 +2813,6 @@ h6 {
     box-shadow: 0 8px 22px rgba(91, 70, 246, 0.5);
 }
 
-/* ==========================================================================
-   12. Motion & Scroll In-View Animation System (Exact sapphireitsg.com behavior)
-   ========================================================================== */
-
-/* Left elements slide in from the left */
 .animation-element.slide-left {
     opacity: 0;
     transform: translate3d(-80px, 0, 0);
@@ -2849,7 +2820,6 @@ h6 {
     will-change: transform, opacity;
 }
 
-/* Right elements slide in from the right */
 .animation-element.slide-right {
     opacity: 0;
     transform: translate3d(80px, 0, 0);
@@ -2857,7 +2827,6 @@ h6 {
     will-change: transform, opacity;
 }
 
-/* Vertical elements slide in from bottom */
 .animation-element.slide-up {
     opacity: 0;
     transform: translate3d(0, 40px, 0);
@@ -2865,7 +2834,6 @@ h6 {
     will-change: transform, opacity;
 }
 
-/* When scrolled into view, smoothly transition to native position */
 .animation-element.slide-left.in-view,
 .animation-element.slide-right.in-view,
 .animation-element.slide-up.in-view {
@@ -2873,7 +2841,6 @@ h6 {
     transform: translate3d(0, 0, 0);
 }
 
-/* Stagger delay classes if needed */
 .delay-100 {
     transition-delay: 0.1s;
 }
@@ -2890,11 +2857,6 @@ h6 {
     transition-delay: 0.4s;
 }
 
-/* ==========================================================================
-   13. Responsive Breakpoints & Media Queries
-   ========================================================================== */
-
-/* 1. Large Desktops & Laptops (<= 1200px) */
 @media (max-width: 1200px) {
     .section-main-heading {
         font-size: 34px;
@@ -2913,8 +2875,23 @@ h6 {
     }
 }
 
-/* 2. Tablets & Small Laptops (<= 991px) */
 @media (max-width: 991px) {
+    :root {
+        --fs-hero: 40px;
+        --fs-h1: 34px;
+        --fs-h2: 28px;
+        --fs-h3: 22px;
+        --fs-h4: 19px;
+        --fs-h5: 16.5px;
+        --fs-h6: 15px;
+        --fs-lead: 15.5px;
+        --fs-base: 16px;
+        --fs-sm: 16px;
+        --fs-xs: 16px;
+        --fs-btn: 16px;
+        --btn-padding: 9px 20px;
+    }
+
     .desktop-nav {
         display: none;
     }
@@ -3012,8 +2989,47 @@ h6 {
     }
 }
 
-/* 3. Landscape Mobiles & Small Tablets (<= 767px) */
 @media (max-width: 767px) {
+    :root {
+        --fs-hero: 28px;
+        --fs-h1: 24px;
+        --fs-h2: 21px;
+        --fs-h3: 18px;
+        --fs-h4: 16px;
+        --fs-h5: 14.5px;
+        --fs-h6: 13.5px;
+        --fs-lead: 14px;
+        --fs-base: 16px;
+        --fs-sm: 14px;
+        --fs-xs: 14px;
+        --fs-btn: 14px;
+        --btn-padding: 8px 16px;
+        --section-py: 45px;
+    }
+
+    .about-hero-heading,
+    .section-main-heading,
+    .whiteglove-heading {
+        font-size: var(--fs-h2) !important;
+        line-height: 1.25 !important;
+    }
+
+    .about-hero-sub,
+    .section-sub-heading,
+    .cta-subtext {
+        font-size: var(--fs-sm) !important;
+        line-height: 1.55 !important;
+    }
+
+    .button-style,
+    .btn-primary-pill,
+    .btn-secondary-pill,
+    .btn-cta-primary,
+    .subscribe-btn {
+        font-size: var(--fs-btn) !important;
+        padding: var(--btn-padding) !important;
+    }
+
     .whiteglove-tag {
         padding: 6px 12px;
     }
@@ -3022,7 +3038,6 @@ h6 {
         font-size: 28px;
     }
 
-    /* Header Responsive Layout */
     .site-header {
         padding: 13px 0;
     }
@@ -3075,7 +3090,6 @@ h6 {
         right: -10px;
     }
 
-    /* Constrain lateral animation offsets to eliminate horizontal overflow */
     .animation-element.slide-left {
         transform: translate3d(-18px, 0, 0);
     }
@@ -3225,8 +3239,11 @@ h6 {
     }
 }
 
-/* 4. Small Mobiles (<= 480px) */
 @media (max-width: 480px) {
+    .intro-lead-text {
+        font-size: var(--text-size);
+    }
+
     .container {
         padding: 0 14px;
     }
@@ -3288,7 +3305,7 @@ h6 {
     }
 
     .about-hero-sub {
-        font-size: 0.94rem;
+        font-size: 0.94rem !important;
         line-height: 1.55;
     }
 
@@ -3339,9 +3356,12 @@ h6 {
     .btn-cta-primary {
         width: 100%;
     }
+
+    .whiteglove-text {
+        font-size: 16px;
+    }
 }
 
-/* Accessibility: Respect Reduced Motion Preference */
 @media (prefers-reduced-motion: reduce) {
 
     .animation-element.slide-left,

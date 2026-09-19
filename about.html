@@ -8,136 +8,230 @@
     <meta name="description"
         content="At Sapphire Technologies, we are passionate about turning digital ideas into reality. Specializing in cutting-edge technology solutions across website development, mobile app development, digital marketing, and white-glove IT services.">
 
-    <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap"
         rel="stylesheet">
 
-    <!-- Bootstrap 5 Grid (Container only) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons & Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Dedicated About Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./about.css">
+    <link rel="icon" href="./assets/logo.png" type="image/png">
 </head>
 
 <body>
 
-    <!-- Top Navigation Bar (Consistent with index.html) -->
-    <header class="site-header" id="siteHeader">
-        <div class="container nav-container">
-            <!-- Logo -->
-            <a href="./index.html" class="brand-logo" aria-label="Sapphire Home">
-                <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
-                <span class="logo-text">sapphire</span>
-            </a>
+    <!-- header-area -->
+    <header class="td-header-height">
+        <div class="td-header__area z-index-999 td-transparent">
+            <!-- Top bar -->
+            <div class="td-header-3-top d-none d-lg-block">
+                <div class="container-fluid container-1680">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="td-header-3-top-info">
+                                <span>
+                                    <a href="https://maps.google.com" target="_blank">
+                                        <i class="bi bi-geo-alt"></i>Golden-I, Office No. C-203, Noida (UP), India
+                                    </a>
+                                </span>
+                                <span class="dvdr">/</span>
+                                <span>
+                                    <a href="tel:+919311439117">
+                                        <i class="bi bi-telephone"></i>+91 9311439117
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="td-header-3-top-social d-flex align-items-center justify-content-end">
+                                <span class="td-email">
+                                    <a href="mailto:info@sapphireitsg.com">
+                                        <i class="bi bi-envelope"></i>info@sapphireitsg.com
+                                    </a>
+                                </span>
+                                <span class="dvdr">/</span>
+                                <span><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></span>
+                                <span><a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a></span>
+                                <span><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></span>
+                                <span><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></span>
+                                <span><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <!-- Desktop Navigation Links -->
-            <nav class="desktop-nav" aria-label="Main Navigation">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="./index.html" class="nav-link">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./about.html" class="nav-link active">ABOUT US</a>
-                    </li>
-                    <li class="nav-item has-dropdown">
-                        <a href="./index.html#events" class="nav-link">
-                            EVENTS <i class="bi bi-chevron-down dropdown-arrow"></i>
-                        </a>
-                        <ul class="dropdown-menu-custom">
-                            <li><a href="./index.html#home">Home Business</a></li>
-                            <li><a href="./index.html#conference">Home Conference</a></li>
-                            <li><a href="./index.html#virtual">Home Virtual Summit</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./index.html#blog" class="nav-link">BLOGS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./index.html#gallery" class="nav-link">GALLERY</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./index.html#contact" class="nav-link">CONTACT US</a>
-                    </li>
-                </ul>
-            </nav>
+            <!-- Sticky & Transparent Navbar -->
+            <div id="header-sticky" class="header-main-wrap">
+                <div class="container-fluid container-1680">
+                    <div class="row align-items-center">
+                        <div class="col-xxl-9 col-xl-9 col-6">
+                            <div class="tdmenu__wrap d-flex align-items-center justify-content-between">
+                                <div class="logo">
+                                    <a class="brand-logo" href="./index.html" aria-label="Sapphire Home">
+                                        <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
+                                        <span class="logo-text">sapphire</span>
+                                    </a>
+                                </div>
+                                <nav class="tdmenu__nav tdmenu-3 d-none d-xl-flex" aria-label="Main Navigation">
+                                    <div class="tdmenu__navbar-wrap tdmenu__main-menu">
+                                        <ul class="navigation">
+                                            <li>
+                                                <a href="./index.html">HOME</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="./about.html">ABOUT US</a>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="./events.html">EVENTS <i
+                                                        class="bi bi-chevron-down dropdown-arrow"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="./events.html">All Events</a></li>
+                                                    <li><a href="./upcoming-events.html">Upcoming Events</a></li>
+                                                    <li><a href="./showing-events.html">Showing Events</a></li>
+                                                    <li><a href="./expired-events.html">Expired Events</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="./blogs.html">BLOGS</a>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="./gallery.html">GALLERY <i
+                                                        class="bi bi-chevron-down dropdown-arrow"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="./gallery.html">All Gallery</a></li>
+                                                    <li><a href="./gallery-image.html">Image</a></li>
+                                                    <li><a href="./gallery-video.html">Video</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="./contact.html">CONTACT US</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
 
-            <!-- Right Action Icons -->
-            <div class="nav-actions">
-                <button type="button" class="action-btn search-btn" aria-label="Search" id="searchBtn">
-                    <i class="bi bi-search"></i>
-                </button>
-                <a href="./index.html#cart" class="action-btn cart-btn" aria-label="Shopping Cart">
-                    <i class="bi bi-cart2"></i>
-                    <span class="cart-badge">0</span>
-                </a>
-                <button type="button" class="action-btn menu-toggle" id="menuToggle" aria-label="Toggle mobile menu"
-                    aria-expanded="false">
-                    <i class="bi bi-list"></i>
-                </button>
+                        <div class="col-xxl-3 col-xl-3 col-6">
+                            <div
+                                class="td-menu-right-action td-menu-right-action-3 d-flex align-items-center justify-content-end">
+                                <button class="search-button search-open-btn" id="searchBtn" aria-label="Search">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                                <div class="td-header-cart p-relative">
+                                    <a href="./index.html#cart" class="cart-button" aria-label="Cart">
+                                        <i class="bi bi-cart2"></i>
+                                        <span class="td-header-cart-count">0</span>
+                                    </a>
+                                </div>
+                                <div class="td-header-menu-bar lh-1 p-relative ml-20">
+                                    <a class="td-btn td-left-right d-none d-xl-inline-flex" href="./contact.html">
+                                        <span class="mr10 td-text d-inline-block mr-5">Buy Ticket</span>
+                                        <span class="td-arrow-angle">
+                                            <svg class="td-arrow-svg-top-right" width="13" height="14"
+                                                viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0.943836 13.5C0.685616 13.5 0.45411 13.4021 0.276027 13.224C0.0979452 13.0459 0 12.8055 0 12.5562C0 12.3068 0.0979452 12.0664 0.276027 11.8884L9.76781 2.38767H2.02123C1.49589 2.38767 1.0774 1.96027 1.0774 1.44384C1.0774 0.927397 1.50479 0.5 2.03014 0.5H12.0562C12.1274 0.5 12.1986 0.508904 12.2788 0.526712L12.4034 0.562329L12.537 0.633562C12.5637 0.65137 12.5993 0.678082 12.626 0.69589C12.6973 0.749315 12.7507 0.80274 12.7952 0.856164C12.8219 0.891781 12.8575 0.927397 12.8842 0.989726L12.9555 1.1411L12.9822 1.22123C13 1.29247 13.0089 1.3726 13.0089 1.44384V11.4699C13.0089 11.9952 12.5815 12.4137 12.0651 12.4137C11.5486 12.4137 11.1212 11.9863 11.1212 11.4699V3.72329L1.62055 13.224C1.44247 13.4021 1.20205 13.5 0.943836 13.5Z"
+                                                    fill="currentColor" />
+                                                <path
+                                                    d="M0.943836 13.5C0.685616 13.5 0.45411 13.4021 0.276027 13.224C0.0979452 13.0459 0 12.8055 0 12.5562C0 12.3068 0.0979452 12.0664 0.276027 11.8884L9.76781 2.38767H2.02123C1.49589 2.38767 1.0774 1.96027 1.0774 1.44384C1.0774 0.927397 1.50479 0.5 2.03014 0.5H12.0562C12.1274 0.5 12.1986 0.508904 12.2788 0.526712L12.4034 0.562329L12.537 0.633562C12.5637 0.65137 12.5993 0.678082 12.626 0.69589C12.6973 0.749315 12.7507 0.80274 12.7952 0.856164C12.8219 0.891781 12.8575 0.927397 12.8842 0.989726L12.9555 1.1411L12.9822 1.22123C13 1.29247 13.0089 1.3726 13.0089 1.44384V11.4699C13.0089 11.9952 12.5815 12.4137 12.0651 12.4137C11.5486 12.4137 11.1212 11.9863 11.1212 11.4699V3.72329L1.62055 13.224C1.44247 13.4021 1.20205 13.5 0.943836 13.5Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <button class="mobile-nav-toggler d-block d-xl-none" id="menuToggle"
+                                        aria-label="Toggle mobile menu" aria-expanded="false">
+                                        <i class="bi bi-list" style="color: white;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Mobile Drawer -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <div class="drawer-header">
+                <div class="brand-logo">
+                    <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
+                    <span class="logo-text">sapphire</span>
+                </div>
+                <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-list">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html" class="active">ABOUT US</a></li>
+                <li class="has-submenu">
+                    <a href="./events.html">EVENTS <i class="bi bi-chevron-down ms-auto"
+                            style="font-size: 12px;"></i></a>
+                    <ul class="mobile-sub-menu">
+                        <li><a href="./events.html">All Events</a></li>
+                        <li><a href="./upcoming-events.html">Upcoming Events</a></li>
+                        <li><a href="./showing-events.html">Showing Events</a></li>
+                        <li><a href="./expired-events.html">Expired Events</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blogs.html">BLOGS</a></li>
+                <li class="has-submenu">
+                    <a href="./gallery.html">GALLERY <i class="bi bi-chevron-down ms-auto"
+                            style="font-size: 12px;"></i></a>
+                    <ul class="mobile-sub-menu">
+                        <li><a href="./gallery.html">All Gallery</a></li>
+                        <li><a href="./gallery-image.html">Image</a></li>
+                        <li><a href="./gallery-video.html">Video</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+            <div class="mobile-drawer-socials">
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="drawer-backdrop" id="drawerBackdrop"></div>
     </header>
-
-    <!-- Mobile Navigation Drawer -->
-    <div class="mobile-drawer" id="mobileDrawer">
-        <div class="drawer-header">
-            <div class="brand-logo">
-                <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
-                <span class="logo-text">sapphire</span>
-            </div>
-            <button class="drawer-close" id="drawerClose" aria-label="Close menu">
-                <i class="bi bi-x-lg"></i>
-            </button>
-        </div>
-        <ul class="mobile-nav-list">
-            <li><a href="./index.html">HOME</a></li>
-            <li><a href="./about.html" class="active">ABOUT US</a></li>
-            <li><a href="./index.html#events">EVENTS</a></li>
-            <li><a href="./index.html#speakers">SPEAKERS</a></li>
-            <li><a href="./index.html#pages">PAGES</a></li>
-            <li><a href="./index.html#contact">CONTACT</a></li>
-        </ul>
-        <div class="mobile-drawer-socials">
-            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-        </div>
-    </div>
-    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <!-- header-area-end -->
 
     <main>
-        <!-- 1. Hero Breadcrumb Banner with Ambient Glow Animation -->
-        <section class="about-hero-section">
-            <div class="about-hero-glow"></div>
-            <div class="container text-center">
 
-                <h1 class="about-hero-heading">About Sapphire Technologies</h1>
-                <p class="about-hero-sub">
-                    Empowering businesses worldwide with cutting-edge technology solutions, custom web &amp; mobile
-                    engineering, and white-glove excellence.
-                </p>
-                <nav class="about-breadcrumbs" aria-label="Breadcrumb">
-                    <a href="./index.html"><i class="bi bi-house-door"></i> Home</a>
-                    <span class="breadcrumb-sep"><i class="bi bi-chevron-right"></i></span>
-                    <span class="current">About Us</span>
-                </nav>
+        <!-- Page Hero Banner (Single Background without Slider) -->
+        <section class="td-page-hero p-relative">
+            <div class="td-page-hero-bg" style="background-image: url('./assets/about/about-banner.jpg');"></div>
+            <div class="td-hero-overlay"></div>
+            <div class="container">
+                <div class="td-page-hero-content">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-lg-10">
+                            <span class="td-hero-3-subtitle mb-15 d-inline-block">WHO WE ARE</span>
+                            <h1 class="td-page-hero-title">About Sapphire Technologies</h1>
+                            <div class="td-page-hero-breadcrumb">
+                                <a href="./index.html">Home</a>
+                                <i class="fa-solid fa-angle-right"></i>
+                                <span class="current">About Us</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 2. Section 1: About Sapphire Technologies (Two-Column Layout with Slide Animations) -->
         <section class="about-intro-section" id="about-sec">
             <div class="container">
                 <div class="about-intro-grid">
-                    <!-- Left Column: Animates from Left (slide-left) -->
+
                     <div class="intro-content-col animation-element slide-left">
                         <span class="section-tag-badge">WHO WE ARE</span>
                         <h2 class="section-main-heading">
@@ -157,7 +251,6 @@
                             expectations.
                         </p>
 
-                        <!-- Key Pillars Feature Cards -->
                         <div class="intro-features-grid">
                             <div class="feature-mini-card">
                                 <div class="mini-card-icon">
@@ -184,7 +277,6 @@
                             </div>
                         </div>
 
-                        <!-- Action Buttons -->
                         <div class="intro-actions-wrap">
                             <a href="./index.html#contact" class="button-style btn-primary-pill">
                                 <span>GET IN TOUCH</span>
@@ -197,7 +289,6 @@
                         </div>
                     </div>
 
-                    <!-- Right Column: Animates from Right (slide-right) -->
                     <div class="intro-visual-col animation-element slide-right">
                         <div class="visual-card-wrapper">
                             <div class="visual-card-inner">
@@ -206,26 +297,12 @@
                                 <div class="visual-overlay-glow"></div>
                             </div>
 
-                            <!-- Floating Experience Badge with Micro-Animation -->
-                            <!-- <div class="floating-experience-badge">
-                                <div class="badge-icon-wrap">
-                                    <i class="bi bi-patch-check-fill"></i>
-                                </div>
-                                <div class="badge-info">
-                                    <span class="badge-number">10+</span>
-                                    <span class="badge-label">Years of Digital<br>Excellence</span>
-                                </div>
-                            </div> -->
-
-                            <!-- Decorative Floating Tech Badge -->
-
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. Section 2: White-Glove Service Experience (Featured Commitment Banner) -->
         <section class="about-whiteglove-section">
             <div class="container">
                 <div class="whiteglove-card animation-element slide-up">
@@ -263,10 +340,7 @@
                             <div class="whiteglove-image-box">
                                 <img src="./assets/about/about-banner.jpg" alt="Sapphire Technologies White-Glove Team"
                                     class="whiteglove-img">
-                                <!-- <div class="whiteglove-badge-accent">
-                                    <i class="bi bi-award-fill"></i>
-                                    <span>Dedicated Client Delivery</span>
-                                </div> -->
+
                             </div>
                         </div>
                     </div>
@@ -274,7 +348,6 @@
             </div>
         </section>
 
-        <!-- 4. Section 3: Strategic Pillars (Our Mission, Our Vision, Why Choose Us with Alternating Slide Animations) -->
         <section class="about-pillars-section">
             <div class="container">
                 <div class="section-header-center animation-element slide-up">
@@ -286,7 +359,7 @@
                 </div>
 
                 <div class="alternating-pillars-wrap">
-                    <!-- Row 1: Our Mission (Left: Text slide-left, Right: Image slide-right) -->
+
                     <div class="pillar-alt-row">
                         <div class="pillar-text-col animation-element slide-left">
                             <span class="pillar-step-badge">OUR PURPOSE</span>
@@ -316,7 +389,6 @@
                         </div>
                     </div>
 
-                    <!-- Row 2: Our Vision (Left: Image slide-left, Right: Text slide-right) -->
                     <div class="pillar-alt-row reverse-mobile">
                         <div class="pillar-img-col animation-element slide-left">
                             <div class="pillar-img-frame">
@@ -346,7 +418,6 @@
                         </div>
                     </div>
 
-                    <!-- Row 3: Why Choose Us (Left: Text slide-left, Right: Image slide-right) -->
                     <div class="pillar-alt-row">
                         <div class="pillar-text-col animation-element slide-left">
                             <span class="pillar-step-badge">OUR ADVANTAGE</span>
@@ -400,7 +471,6 @@
             </div>
         </section>
 
-        <!-- 5. Section 4: Achievements & Statistics Counter Bar -->
         <section class="about-stats-section">
             <div class="container">
                 <div class="stats-intro stats-intro-left animation-element slide-left">
@@ -420,7 +490,7 @@
                 </div>
 
                 <div class="stats-counter-grid">
-                    <!-- Stat 1: 200 + Projects Complete -->
+
                     <div class="counter-cell-socket">
                         <div class="counter-box animation-element cell-pop" style="--cell-delay: 0.05s;">
                             <div class="counter-icon-holder">
@@ -435,7 +505,6 @@
                         </div>
                     </div>
 
-                    <!-- Stat 2: 150 k + Mobile Application -->
                     <div class="counter-cell-socket">
                         <div class="counter-box animation-element cell-pop" style="--cell-delay: 0.22s;">
                             <div class="counter-icon-holder">
@@ -450,7 +519,6 @@
                         </div>
                     </div>
 
-                    <!-- Stat 3: 200 + Clients Are Happy -->
                     <div class="counter-cell-socket">
                         <div class="counter-box animation-element cell-pop" style="--cell-delay: 0.39s;">
                             <div class="counter-icon-holder">
@@ -465,7 +533,6 @@
                         </div>
                     </div>
 
-                    <!-- Stat 4: 10 + Nation Served -->
                     <div class="counter-cell-socket">
                         <div class="counter-box animation-element cell-pop" style="--cell-delay: 0.56s;">
                             <div class="counter-icon-holder">
@@ -483,7 +550,6 @@
             </div>
         </section>
 
-        <!-- 6. Section 5: Our Work Process (4-Step Sequential Cards) -->
         <section class="about-process-section" id="process">
             <div class="container">
                 <div class="section-header-center animation-element slide-up">
@@ -496,7 +562,7 @@
                 </div>
 
                 <div class="process-steps-grid">
-                    <!-- Step 01: Planning Socket & Pop-Out Card -->
+
                     <div class="process-cell-socket">
                         <div class="cell-cut-bed">
                             <div class="cut-bed-indicator">
@@ -519,7 +585,6 @@
                         </div>
                     </div>
 
-                    <!-- Step 02: Design Socket & Pop-Out Card -->
                     <div class="process-cell-socket">
                         <div class="cell-cut-bed">
                             <div class="cut-bed-indicator">
@@ -542,7 +607,6 @@
                         </div>
                     </div>
 
-                    <!-- Step 03: Development Socket & Pop-Out Card -->
                     <div class="process-cell-socket">
                         <div class="cell-cut-bed">
                             <div class="cut-bed-indicator">
@@ -567,7 +631,6 @@
                         </div>
                     </div>
 
-                    <!-- Step 04: Testing Socket & Pop-Out Card -->
                     <div class="process-cell-socket">
                         <div class="cell-cut-bed">
                             <div class="cut-bed-indicator">
@@ -594,7 +657,6 @@
             </div>
         </section>
 
-        <!-- 7. Section 6: Client Trust & Logo Carousel (Loved By 200+ Customers) -->
         <section class="about-clients-section">
             <div class="container">
                 <div class="section-header-center animation-element slide-up">
@@ -613,9 +675,8 @@
                 </div>
             </div>
 
-            <!-- Continuous Dual-Track Logo Marquee -->
             <div class="logo-marquee-wrapper max-width">
-                <!-- Row 1: Scrolling Left -->
+
                 <div class="logo-marquee-track track-left">
                     <div class="logo-marquee-item"><img src="./assets/about/logos/Barkely.png" alt="Barkely"></div>
                     <div class="logo-marquee-item"><img src="./assets/about/logos/SHAAZO.png" alt="SHAAZO"></div>
@@ -629,7 +690,6 @@
                     <div class="logo-marquee-item"><img src="./assets/about/logos/ivy-bouquet.png" alt="Ivy Bouquet">
                     </div>
 
-                    <!-- Duplicate for Seamless Infinite Loop -->
                     <div class="logo-marquee-item"><img src="./assets/about/logos/Barkely.png" alt="Barkely"></div>
                     <div class="logo-marquee-item"><img src="./assets/about/logos/SHAAZO.png" alt="SHAAZO"></div>
                     <div class="logo-marquee-item"><img src="./assets/about/logos/KFB.png" alt="KFB"></div>
@@ -643,7 +703,6 @@
                     </div>
                 </div>
 
-                <!-- Row 2: Scrolling Right -->
                 <div class="logo-marquee-track track-right">
                     <div class="logo-marquee-item"><img src="./assets/about/logos/kids-fable.png" alt="Kids Fable">
                     </div>
@@ -660,7 +719,6 @@
                     <div class="logo-marquee-item"><img src="./assets/about/logos/fivecolour.png" alt="Five Colour">
                     </div>
 
-                    <!-- Duplicate for Seamless Infinite Loop -->
                     <div class="logo-marquee-item"><img src="./assets/about/logos/kids-fable.png" alt="Kids Fable">
                     </div>
                     <div class="logo-marquee-item"><img src="./assets/about/logos/ASJLawfirm.png" alt="ASJ Law Firm">
@@ -679,7 +737,6 @@
             </div>
         </section>
 
-        <!-- 8. Section 7: Let's Talk Contact Grid (with Dynamic Interactive Animations & Ambient Gradient) -->
         <section class="about-letstalk-section lets-talk" id="talk">
             <div class="container">
                 <div class="section-header-center animation-element slide-up">
@@ -692,7 +749,7 @@
                 </div>
 
                 <div class="letstalk-grid">
-                    <!-- Channel 1: Call -->
+
                     <div class="letstalk-card card-talk-call entry animation-element slide-up">
                         <div class="talk-icon-box">
                             <img src="./assets/about/talk_call.png" class="talk-icon-img anim-call vert-move"
@@ -702,7 +759,6 @@
                         <a href="tel:+919311439117" class="talk-link">+91 931 143 9117</a>
                     </div>
 
-                    <!-- Channel 2: Write to us -->
                     <div class="letstalk-card card-talk-mail entry animation-element slide-up">
                         <div class="talk-icon-box">
                             <img src="./assets/about/talk_mail.png" class="talk-icon-img anim-mail vert-move"
@@ -712,7 +768,6 @@
                         <a href="mailto:sales@sapphireitsg.com" class="talk-link">sales@sapphireitsg.com</a>
                     </div>
 
-                    <!-- Channel 3: Video call on Skype -->
                     <div class="letstalk-card card-talk-skype entry animation-element slide-up">
                         <div class="talk-icon-box">
                             <img src="./assets/about/talk_skype.png" class="talk-icon-img anim-skype vert-move"
@@ -722,7 +777,6 @@
                         <a href="skype:live:.cid.3ee7ab33f156ba6b?chat" class="talk-link">live:.cid.3ee7ab33f156ba6b</a>
                     </div>
 
-                    <!-- Channel 4: Chat with us -->
                     <div class="letstalk-card card-talk-chat entry animation-element slide-up">
                         <div class="talk-icon-box">
                             <img src="./assets/about/talk_chat.png" class="talk-icon-img anim-chat vert-move"
@@ -736,7 +790,6 @@
             </div>
         </section>
 
-        <!-- 9. Section 8: Global Presence & International Offices -->
         <section class="about-presence-section">
             <div class="container">
                 <div class="section-header-center animation-element slide-up">
@@ -749,7 +802,7 @@
                 </div>
 
                 <div class="presence-grid">
-                    <!-- India Head Office -->
+
                     <div class="presence-card card-india animation-element slide-up">
                         <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
                         <h4 class="presence-country">India Head Office</h4>
@@ -757,7 +810,6 @@
                         <span class="presence-contact">info@sapphireitsg.com | +91 931 143 9117</span>
                     </div>
 
-                    <!-- Saudi Arabia Office -->
                     <div class="presence-card card-saudi animation-element slide-up">
                         <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
                         <h4 class="presence-country">Saudi Arabia Office</h4>
@@ -765,7 +817,6 @@
                         <span class="presence-contact">Dammam 31431, Khalej Road, Saudi Arabia</span>
                     </div>
 
-                    <!-- Canada Office -->
                     <div class="presence-card card-canada animation-element slide-up">
                         <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
                         <h4 class="presence-country">Canada Office</h4>
@@ -773,7 +824,6 @@
                         <span class="presence-contact">North America Operations Hub</span>
                     </div>
 
-                    <!-- Dubai Office -->
                     <div class="presence-card card-uae animation-element slide-up">
                         <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
                         <h4 class="presence-country">Dubai (UAE)</h4>
@@ -781,7 +831,6 @@
                         <span class="presence-contact">Web Designing &amp; Mobile App Development</span>
                     </div>
 
-                    <!-- Kuwait Office -->
                     <div class="presence-card card-kuwait animation-element slide-up">
                         <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
                         <h4 class="presence-country">Kuwait</h4>
@@ -789,7 +838,6 @@
                         <span class="presence-contact">Web Designing &amp; Mobile Development</span>
                     </div>
 
-                    <!-- London Office -->
                     <div class="presence-card card-uk animation-element slide-up">
                         <div class="presence-flag-icon"><i class="bi bi-geo-alt-fill"></i></div>
                         <h4 class="presence-country">London (UK)</h4>
@@ -800,7 +848,6 @@
             </div>
         </section>
 
-        <!-- 10. Call To Action Banner -->
         <section class="about-cta-section">
             <div class="container">
                 <div class="about-cta-card animation-element slide-up">
@@ -823,11 +870,10 @@
         </section>
     </main>
 
-    <!-- Subscribe Banner Section (Floating above footer) -->
     <section>
         <div class="subscribe-form container">
             <div class="subscribe-wrapper">
-                <!-- Left: Mail Icon & Info -->
+
                 <div class="subscribe-left">
                     <div class="subscribe-icon-wrap" aria-hidden="true">
                         <i class="bi bi-envelope"></i>
@@ -839,7 +885,6 @@
                     </div>
                 </div>
 
-                <!-- Center: Email Input & Subscribe Button -->
                 <form class="subscribe-form-action" onsubmit="event.preventDefault();">
                     <div class="subscribe-input-group">
                         <input type="email" class="subscribe-input" placeholder="Enter your email address" required
@@ -851,11 +896,10 @@
         </div>
     </section>
 
-    <!-- Main Site Footer (Identical to index.html) -->
     <footer class="site-footer" id="contact">
         <div class="container">
             <div class="footer-top">
-                <!-- Col 1: Brand & Contact -->
+
                 <div class="footer-col footer-col-brand">
                     <a href="./index.html" class="brand-logo" aria-label="Sapphire Home">
                         <img src="./assets/logo.png" alt="Sapphire Logo" class="logo-img">
@@ -865,8 +909,6 @@
                         Middlest 2 East 42nd Streearketplace<br>
                         New York, NY 10017
                     </p>
-                    <!-- <a href="tel:+1235590067990" class="footer-phone">+123(55) 90067990</a>
-                    <a href="mailto:info@gmail.com" class="footer-email">info@gmail.com</a> -->
 
                     <div class="footer-socials">
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -903,7 +945,7 @@
                             </li>
                             <li>
                                 <i class="bi bi-chevron-right"></i>
-                                <a href="#agenda">Blogs</a>
+                                <a href="./blogs.html">Blogs</a>
                             </li>
                             <li>
                                 <i class="bi bi-chevron-right"></i>
@@ -934,7 +976,6 @@
                     </div>
                 </div>
 
-                <!-- Col 3: Newsletter / Contact Info -->
                 <div class="footer-col footer-col-newsletter">
                     <h3 class="footer-title">Contact Information</h3>
                     <div class="footer-links-list">
@@ -947,12 +988,11 @@
                         </li>
                         <li><a href="speakers.html"><i class="bi bi-telephone-outbound"></i> :+919311439117</a></li>
                         <li><a href="#agenda"><i class="bi bi-browser-chrome"></i> : https://sapphireitsg.com/</a></li>
-                        <li><a href="#sponsors"> <i class="bi bi-alarm"></i> : 21 Sep 2026</a></li>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Bottom Bar: Copyright & Socials & Scroll Top -->
             <div class="footer-bottom">
                 <p class="footer-copyright">
                     Copyrights © 2026. All rights reserved by Sapphire Technologies
@@ -970,7 +1010,6 @@
         </div>
     </footer>
 
-    <!-- Script for mobile drawer toggle, scroll reveal, counters, and scroll-to-top -->
     <script src="./script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -1034,85 +1073,9 @@
                 }
             }
 
-            window.addEventListener('scroll', checkCounters, { passive: true });
-            checkCounters();
-
-            // 3. Header background change on scroll (Identical to home page)
-            const siteHeader = document.getElementById('siteHeader');
-            if (siteHeader) {
-                const updateHeaderState = () => {
-                    if (window.scrollY > 40) {
-                        siteHeader.classList.add('scrolled');
-                    } else {
-                        siteHeader.classList.remove('scrolled');
-                    }
-                };
-                window.addEventListener('scroll', updateHeaderState, { passive: true });
-                updateHeaderState(); // Check on initial page load
-            }
-
-            // 4. Scroll to Top Button
-            const scrollTopBtn = document.getElementById('scrollTopBtn');
-            if (scrollTopBtn) {
-                scrollTopBtn.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // 5. Mobile Drawer Toggle (Identical to script.js)
-            const menuToggle = document.getElementById('menuToggle');
-            const drawerClose = document.getElementById('drawerClose');
-            const mobileDrawer = document.getElementById('mobileDrawer');
-            const drawerBackdrop = document.getElementById('drawerBackdrop');
-
-            function toggleDrawer(open) {
-                if (mobileDrawer) {
-                    mobileDrawer.classList.toggle('open', open);
-                    mobileDrawer.classList.toggle('active', open);
-                }
-                if (drawerBackdrop) {
-                    drawerBackdrop.classList.toggle('active', open);
-                    drawerBackdrop.classList.toggle('open', open);
-                }
-                if (menuToggle) {
-                    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-                }
-                document.body.style.overflow = open ? 'hidden' : '';
-            }
-
-            if (menuToggle) {
-                menuToggle.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    toggleDrawer(true);
-                });
-            }
-            if (drawerClose) {
-                drawerClose.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    toggleDrawer(false);
-                });
-            }
-            if (drawerBackdrop) {
-                drawerBackdrop.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    toggleDrawer(false);
-                });
-            }
-
-            // Close mobile drawer when clicking any link inside it
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-list a');
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', () => toggleDrawer(false));
-            });
-
-            // Close on Escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && mobileDrawer && (mobileDrawer.classList.contains('active') || mobileDrawer.classList.contains('open'))) {
-                    toggleDrawer(false);
-                }
-            });
         });
     </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

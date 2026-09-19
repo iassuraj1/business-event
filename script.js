@@ -1,21 +1,23 @@
-
-// Mobile Drawer Toggle
 const menuToggle = document.getElementById('menuToggle');
 const drawerClose = document.getElementById('drawerClose');
 const mobileDrawer = document.getElementById('mobileDrawer');
 const drawerBackdrop = document.getElementById('drawerBackdrop');
 
 function openDrawer() {
-    mobileDrawer.classList.add('active');
-    drawerBackdrop.classList.add('active');
-    menuToggle.setAttribute('aria-expanded', 'true');
+    mobileDrawer?.classList.add('active');
+    mobileDrawer?.classList.add('open');
+    drawerBackdrop?.classList.add('active');
+    drawerBackdrop?.classList.add('open');
+    menuToggle?.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
 }
 
 function closeDrawer() {
-    mobileDrawer.classList.remove('active');
-    drawerBackdrop.classList.remove('active');
-    menuToggle.setAttribute('aria-expanded', 'false');
+    mobileDrawer?.classList.remove('active');
+    mobileDrawer?.classList.remove('open');
+    drawerBackdrop?.classList.remove('active');
+    drawerBackdrop?.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
 }
 
@@ -23,19 +25,32 @@ menuToggle?.addEventListener('click', openDrawer);
 drawerClose?.addEventListener('click', closeDrawer);
 drawerBackdrop?.addEventListener('click', closeDrawer);
 
-// Header background change on scroll
-const siteHeader = document.getElementById('siteHeader');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-        siteHeader.classList.add('scrolled');
-    } else {
-        siteHeader.classList.remove('scrolled');
+document.querySelectorAll('.mobile-nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+        closeDrawer();
+    });
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawer && (mobileDrawer.classList.contains('active') || mobileDrawer.classList.contains('open'))) {
+        closeDrawer();
     }
 });
 
-// Dynamic Real-time Countdown Timer to Jan 18, 2026
-// If the date has passed or for demonstration, calculates dynamically or provides lively ticks
-const targetDate = new Date('2026-01-18T09:00:00');
+const siteHeader = document.getElementById('siteHeader');
+const headerSticky = document.getElementById('header-sticky');
+
+window.addEventListener('scroll', () => {
+    const isScrolled = window.scrollY > 40;
+    if (headerSticky) {
+        headerSticky.classList.toggle('header-sticky', isScrolled);
+    }
+    if (siteHeader) {
+        siteHeader.classList.toggle('scrolled', isScrolled);
+    }
+});
+
+const targetDate = new Date('2026-11-18T09:00:00');
 const daysEl = document.getElementById('timerDays');
 const hoursEl = document.getElementById('timerHours');
 const minsEl = document.getElementById('timerMins');
@@ -51,22 +66,23 @@ function updateCountdown() {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        if (daysEl) daysEl.textContent = days;
-        if (hoursEl) hoursEl.textContent = hours;
-        if (minsEl) minsEl.textContent = minutes;
-        if (secsEl) secsEl.textContent = seconds;
+        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+        if (minsEl) minsEl.textContent = String(minutes).padStart(2, '0');
+        if (secsEl) secsEl.textContent = String(seconds).padStart(2, '0');
     } else {
-        // If demo target is in past, retain the exact screenshot display values and tick seconds
         let s = parseInt(secsEl?.textContent || '55');
         s = s <= 0 ? 59 : s - 1;
-        if (secsEl) secsEl.textContent = s;
+        if (secsEl) secsEl.textContent = String(s).padStart(2, '0');
+        if (daysEl && (daysEl.textContent === '00' || !daysEl.textContent)) daysEl.textContent = '60';
+        if (hoursEl && (hoursEl.textContent === '00' || !hoursEl.textContent)) hoursEl.textContent = '14';
+        if (minsEl && (minsEl.textContent === '00' || !minsEl.textContent)) minsEl.textContent = '35';
     }
 }
 
-// Run countdown timer tick every second
+updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// YouTube Video Modal Controls
 const playVideoBtn = document.getElementById('playVideoBtn');
 const videoCard = document.getElementById('videoCard');
 const videoModal = document.getElementById('videoModal');
@@ -106,7 +122,6 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
-// Schedule Day Tabs Switching
 const scheduleTabs = document.querySelectorAll('.schedule-tab');
 const schedulePanes = document.querySelectorAll('.schedule-day-pane');
 
@@ -131,7 +146,6 @@ scheduleTabs.forEach((tab) => {
     });
 });
 
-// Scroll To Top Button
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 scrollTopBtn?.addEventListener('click', () => {
     window.scrollTo({
@@ -140,12 +154,8 @@ scrollTopBtn?.addEventListener('click', () => {
     });
 });
 
-// ==========================================================================
-// Banner Slider Controller (Synchronized Image & Text Slide Motion)
-// ==========================================================================
-const heroSlider = document.getElementById('heroSlider');
-const heroSliderTrack = document.getElementById('heroSliderTrack');
-const heroSlides = document.querySelectorAll('.hero-slide');
+const heroSlider = document.getElementById('tdHeroSlider') || document.getElementById('heroSlider');
+const heroSlides = document.querySelectorAll('.td-hero-3-slide, .hero-slide');
 const heroPrevBtn = document.getElementById('heroPrevBtn');
 const heroNextBtn = document.getElementById('heroNextBtn');
 const heroDots = document.querySelectorAll('.hero-dot');
@@ -153,29 +163,39 @@ const heroDots = document.querySelectorAll('.hero-dot');
 let currentHeroSlide = 0;
 const totalHeroSlides = heroSlides.length;
 let heroSlideTimer = null;
-const SLIDE_INTERVAL = 5500; // 5.5s autoplay interval
+const SLIDE_INTERVAL = 5500;
 
 function updateHeroSlide(index) {
-    if (!heroSlides.length || !heroSliderTrack) return;
+    if (!heroSlides.length) return;
 
-    // Calculate wrapped circular index
     currentHeroSlide = (index + totalHeroSlides) % totalHeroSlides;
 
-    // Shift the track horizontally so both image and text slide in unison
-    heroSliderTrack.style.transform = `translateX(-${currentHeroSlide * 100}%)`;
-
-    // Toggle active state to trigger micro-animations on text & heading
     heroSlides.forEach((slide, idx) => {
         if (idx === currentHeroSlide) {
             slide.classList.add('active');
             slide.setAttribute('aria-hidden', 'false');
+
+            // Force restart of Ken Burns zoom animation on active background
+            const bg = slide.querySelector('.td-hero-3-bg');
+            if (bg) {
+                bg.style.animation = 'none';
+                bg.offsetHeight; // trigger reflow
+                bg.style.animation = '';
+            }
+
+            // Force restart of entrance animations on active elements
+            const animElements = slide.querySelectorAll('.text, .text2, .text3');
+            animElements.forEach(el => {
+                el.style.animation = 'none';
+                el.offsetHeight; // trigger reflow
+                el.style.animation = '';
+            });
         } else {
             slide.classList.remove('active');
             slide.setAttribute('aria-hidden', 'true');
         }
     });
 
-    // Update pagination dots
     heroDots.forEach((dot, idx) => {
         const isActive = idx === currentHeroSlide;
         dot.classList.toggle('active', isActive);
@@ -202,7 +222,6 @@ function resetHeroAutoSlide() {
     startHeroAutoSlide();
 }
 
-// Next and Prev Button Events
 heroNextBtn?.addEventListener('click', () => {
     nextHeroSlide();
     resetHeroAutoSlide();
@@ -213,7 +232,6 @@ heroPrevBtn?.addEventListener('click', () => {
     resetHeroAutoSlide();
 });
 
-// Dot Indicator Click Events
 heroDots.forEach((dot, idx) => {
     dot.addEventListener('click', () => {
         updateHeroSlide(idx);
@@ -221,7 +239,6 @@ heroDots.forEach((dot, idx) => {
     });
 });
 
-// Pause Autoplay on Hover / Resume on Leave
 heroSlider?.addEventListener('mouseenter', () => {
     if (heroSlideTimer) clearInterval(heroSlideTimer);
 });
@@ -230,9 +247,7 @@ heroSlider?.addEventListener('mouseleave', () => {
     startHeroAutoSlide();
 });
 
-// Keyboard Navigation (Left/Right Arrows)
 window.addEventListener('keydown', (e) => {
-    // Only trigger if no interactive modal or input is currently focused
     const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
     if (activeTag === 'input' || activeTag === 'textarea') return;
 
@@ -245,7 +260,11 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
-// Touch Swipe Gestures for Mobile
+// Initialize auto slide
+if (totalHeroSlides > 1) {
+    startHeroAutoSlide();
+}
+
 let touchStartX = 0;
 let touchEndX = 0;
 
@@ -259,28 +278,26 @@ heroSlider?.addEventListener('touchend', (e) => {
 }, { passive: true });
 
 function handleTouchSwipe() {
-    const swipeThreshold = 45; // Minimum px to count as swipe
+    const swipeThreshold = 45;
     const diff = touchEndX - touchStartX;
 
     if (Math.abs(diff) > swipeThreshold) {
         if (diff < 0) {
-            // Swiped Left -> Next Slide
+
             nextHeroSlide();
         } else {
-            // Swiped Right -> Previous Slide
+
             prevHeroSlide();
         }
         resetHeroAutoSlide();
     }
 }
 
-// Initialize Banner Slider
 if (totalHeroSlides > 0) {
     updateHeroSlide(0);
     startHeroAutoSlide();
 }
 
-// Interactive Mobile/Click Toggle for Speaker Cards
 const speakerCards = document.querySelectorAll('.speaker-card');
 speakerCards.forEach((card) => {
     card.addEventListener('click', (e) => {
@@ -298,9 +315,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// ==========================================================================
-// Scroll Reveal: About Section Image slides in smoothly from right to left
-// ==========================================================================
 const aboutImageCard = document.querySelector('.about-event-section .left-content');
 
 if (aboutImageCard) {
@@ -323,9 +337,6 @@ if (aboutImageCard) {
     }
 }
 
-// ==========================================================================
-// Testimonials Slider Controller (Wave Flow Track & Touch Navigation)
-// ==========================================================================
 (function initTestimonialsSlider() {
     const track = document.getElementById('testimonialsTrack');
     const prevBtn = document.getElementById('testimonialPrevBtn');
@@ -380,7 +391,6 @@ if (aboutImageCard) {
         const cardPercentage = 100 / visible;
         track.style.transform = `translateX(-${currentIndex * cardPercentage}%)`;
 
-        // Update dots
         if (dotsContainer) {
             const dots = dotsContainer.querySelectorAll('.testimonial-dot');
             dots.forEach((dot, idx) => {
@@ -446,19 +456,25 @@ if (aboutImageCard) {
         sliderWrap.addEventListener('touchend', startAutoSlide, { passive: true });
     }
 
-    // Touch swipe support for mobile devices
     let touchStartX = 0;
+    let touchStartY = 0;
     let touchEndX = 0;
+    let touchEndY = 0;
 
     track.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
+        if (!e.changedTouches || !e.changedTouches.length) return;
+        touchStartX = e.changedTouches[0].clientX;
+        touchStartY = e.changedTouches[0].clientY;
     }, { passive: true });
 
     track.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        const diff = touchStartX - touchEndX;
-        if (Math.abs(diff) > 45) {
-            if (diff > 0) nextSlide();
+        if (!e.changedTouches || !e.changedTouches.length) return;
+        touchEndX = e.changedTouches[0].clientX;
+        touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchStartX - touchEndX;
+        const diffY = touchStartY - touchEndY;
+        if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) nextSlide();
             else prevSlide();
             resetAutoSlide();
         }
@@ -474,4 +490,39 @@ if (aboutImageCard) {
     startAutoSlide();
 })();
 
+(function initHomeBlogs() {
+    const homeBlogGrid = document.getElementById('homeBlogGrid');
+    if (!homeBlogGrid || typeof blogs === 'undefined' || !Array.isArray(blogs)) return;
 
+    homeBlogGrid.innerHTML = blogs.slice(0, 3).map(blog => `
+        <article class="blog-card">
+            <div class="blog-img-wrap">
+                <img src="${blog.image}" alt="${blog.title}" class="blog-img" loading="lazy">
+                <div class="blog-img-overlay">
+                    <a href="blogs.html?slug=${blog.slug}" class="blog-plus-btn" aria-label="View ${blog.title}">
+                        <i class="fa-solid fa-eye"></i>
+                    </a>
+                </div>
+                <span class="blog-category button-style">${blog.category || 'EVENT'}</span>
+            </div>
+            <div class="blog-content">
+                <h3 class="blog-card-title">
+                    <a href="blogs.html?slug=${blog.slug}">${blog.title}</a>
+                </h3>
+                <div class="blog-meta">
+                    <span class="blog-meta-item">
+                        <i class="bi bi-calendar-event"></i>
+                        <span>${blog.date}</span>
+                    </span>
+                    <span class="blog-meta-item">
+                        <i class="bi bi-chat-left-text"></i>
+                        <span>${blog.comments || '12 Comments'}</span>
+                    </span>
+                </div>
+                <a href="blogs.html?slug=${blog.slug}" class="button-style blog-view-details">
+                    view details
+                </a>
+            </div>
+        </article>
+    `).join('');
+})();
